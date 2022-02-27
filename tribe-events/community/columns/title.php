@@ -36,13 +36,13 @@ if ( $canEdit ) {
 	if ( $canView ) {
 		?>
 		<span class="view">
-			<a href="<?php echo esc_url( tribe_get_event_link( $event ) ); ?>"><?php esc_html_e( 'View', 'tribe-events-community' ); ?></a>
+			<a href="<?php echo esc_url( tribe_get_event_link( $event ) ); ?>"><?php esc_html_e( '表示', 'tribe-events-community' ); ?></a>
 		</span>
 		<?php
 	}
 
 	if ( $canEdit ) {
-		echo tribe( 'community.main' )->getEditButton( $event, __( 'Edit', 'tribe-events-community' ), '<span class="edit wp-admin events-cal"> |', '</span> ' );
+		echo tribe( 'community.main' )->getEditButton( $event, __( '編集', 'tribe-events-community' ), '<span class="edit wp-admin events-cal"> |', '</span> ' );
 	}
 
 	if ( $canDelete ) {

@@ -1251,8 +1251,10 @@ ul li:hover ul{
 
 .tribe-community-events-list td .row-actions a, .tribe-community-events-list td .row-actions a:active, .tribe-community-events-list td .row-actions a:visited {
   /* color: var(--tec-color-text-secondary); */
-  /* color: red;
-  font-weight: bold; */
+  /* 
+  font-weight: bold; 
+  color: #d48a8a;
+  */
 
   /* 注意　テーマの外観 CSSに記載 */
   }
