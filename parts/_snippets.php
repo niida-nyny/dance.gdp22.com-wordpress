@@ -377,4 +377,3 @@ get_template_part('parts/_TaxonomyList');
     ?>
     </ul>
     <?php /***** レッスン詳細 ここまで *****/ ?>
-━━━━━━━━━━━━━━━━━━━━━━━━
