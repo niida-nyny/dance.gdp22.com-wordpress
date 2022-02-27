@@ -35,19 +35,20 @@ $datepicker_format = Tribe__Date_Utils::get_datepicker_format_index();
 <form method="post" enctype="multipart/form-data" data-datepicker_format="<?php echo esc_attr( $datepicker_format ); ?>">
 	<input type="hidden" name="post_ID" id="post_ID" value="<?php echo absint( $tribe_event_id ); ?>"/>
 	<?php wp_nonce_field( 'ecp_event_submission' ); ?>
-
+	
 	<?php tribe_get_template_part( 'community/modules/title' ); ?>
-
-	<?php tribe_get_template_part( 'community/modules/description' ); ?>
-
-	<?php tribe_get_template_part( 'community/modules/datepickers' ); ?>
-
-	<?php tribe_get_template_part( 'community/modules/image' ); ?>
-
+	
 	<?php tribe_get_template_part( 'community/modules/taxonomy', null, [ 'taxonomy' => Tribe__Events__Main::TAXONOMY ] ); ?>
-
+	
 	<?php tribe_get_template_part( 'community/modules/taxonomy-tag', null, [ 'taxonomy' => 'post_tag' ] ); ?>
-
+	
+	<?php tribe_get_template_part( 'community/modules/datepickers' ); ?>
+	
+	<?php tribe_get_template_part( 'community/modules/venue' ); ?>
+	
+	<?php tribe_get_template_part( 'community/modules/image' ); ?>
+	
+	
 	<?php
 	/**
 	 * Action hook before loading linked post types template parts.
@@ -61,11 +62,10 @@ $datepicker_format = Tribe__Date_Utils::get_datepicker_format_index();
 	do_action( 'tribe_events_community_form_before_linked_posts', $tribe_event_id );
 	?>
 
-	<?php tribe_get_template_part( 'community/modules/venue' ); ?>
 
-	<?php tribe_get_template_part( 'community/modules/organizer' ); ?>
+<?php tribe_get_template_part( 'community/modules/organizer' ); ?>
 
-	<?php
+<?php
 	/**
 	 * Action hook after loading linked post types template parts.
 	 *
@@ -78,17 +78,20 @@ $datepicker_format = Tribe__Date_Utils::get_datepicker_format_index();
 	do_action( 'tribe_events_community_form_after_linked_posts', $tribe_event_id );
 	?>
 
-	<?php tribe_get_template_part( 'community/modules/website' ); ?>
+<?php tribe_get_template_part( 'community/modules/website' ); ?>
 
-	<?php tribe_get_template_part( 'community/modules/custom' ); ?>
+<?php tribe_get_template_part( 'community/modules/custom' ); ?>
 
-	<?php tribe_get_template_part( 'community/modules/cost' ); ?>
+<?php tribe_get_template_part( 'community/modules/cost' ); ?>
 
-	<?php tribe_get_template_part( 'community/modules/spam-control' ); ?>
+<?php tribe_get_template_part( 'community/modules/spam-control' ); ?>
 
-	<?php tribe_get_template_part( 'community/modules/terms' ); ?>
+<?php tribe_get_template_part( 'community/modules/terms' ); ?>
 
-	<?php tribe_get_template_part( 'community/modules/submit' ); ?>
+<?php tribe_get_template_part( 'community/modules/description' ); ?>
+
+<?php tribe_get_template_part( 'community/modules/submit' ); ?>
+
 </form>
 
 <?php do_action( 'tribe_events_community_form_after_template', $tribe_event_id ); ?>

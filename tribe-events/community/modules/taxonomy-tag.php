@@ -96,6 +96,7 @@ if ( ! empty( $taxonomy_label ) ) {
 		<h3><?php 
 		// echo esc_html( $taxonomy_label ); ?>
 		対象レベルなど</h3>
+		<span>複数選択可</span>
 		<?php echo tribe_community_required_field_marker( "tax_input.$taxonomy" ); ?>
 	</div>
 

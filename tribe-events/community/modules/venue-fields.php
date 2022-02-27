@@ -31,7 +31,7 @@ $google_maps_enabled = tribe_get_option( 'embedGoogleMaps', true )
 
 		<div class="tribe_sectionheader">
 			<h4>
-				<?php echo esc_html( sprintf( __( '%s Details', 'tribe-events-community' ), tribe_get_venue_label_singular() ) ); ?>
+				<?php echo esc_html( sprintf( __( '%s 詳細', 'tribe-events-community' ), tribe_get_venue_label_singular() ) ); ?>
 				<?php echo  tribe_community_required_field_marker( 'venue' ); ?>
 			</h4>
 		</div>
@@ -39,7 +39,9 @@ $google_maps_enabled = tribe_get_option( 'embedGoogleMaps', true )
 		<div class="venue">
 
 			<label for="VenueAddress">
-				<?php esc_html_e( 'Address', 'tribe-events-community' ); ?>:
+				<?php 
+				// esc_html_e( 'Address', 'tribe-events-community' ); ?>
+			住所:
 			</label>
 			<input
 				type="text"
@@ -54,7 +56,10 @@ $google_maps_enabled = tribe_get_option( 'embedGoogleMaps', true )
 		<div class="venue">
 
 			<label for="VenueCity">
-				<?php esc_html_e( 'City', 'tribe-events-community' ); ?>:
+				<?php 
+				// esc_html_e( 'City', 'tribe-events-community' ); 
+				?>
+				最寄駅:
 			</label>
 			<input
 				type="text"
@@ -114,23 +119,27 @@ $google_maps_enabled = tribe_get_option( 'embedGoogleMaps', true )
 
 		<div class="venue">
 
+		<?php /* 
 			<label for="EventZip">
 				<?php esc_html_e( 'Postal Code', 'tribe-events-community' ); ?>:
 			</label>
 			<input
-				type="text"
-				id="EventZip"
-				name="venue[Zip]"
-				size="6"
-				value="<?php echo esc_attr( tribe_get_zip() ); ?>"
+			type="text"
+			id="EventZip"
+			name="venue[Zip]"
+			size="6"
+			value="<?php echo esc_attr( tribe_get_zip() ); ?>"
 			/>
-
+			
+				*/ ?>
 		</div><!-- .venue -->
 
 		<div class="venue">
 
 			<label for="EventPhone">
-				<?php esc_html_e( 'Phone', 'tribe-events-community' ); ?>:
+				<?php 
+				// esc_html_e( 'Phone', 'tribe-events-community' ); ?>
+				電話:
 			</label>
 			<input
 				type="tel"
@@ -145,7 +154,9 @@ $google_maps_enabled = tribe_get_option( 'embedGoogleMaps', true )
 		<div class="venue">
 
 			<label for="EventWebsite">
-				<?php esc_html_e( 'Website', 'tribe-events-community' ); ?>:
+				<?php 
+				// esc_html_e( 'Website', 'tribe-events-community' ); ?>
+				イベント外部Webサイト:
 			</label>
 			<input
 				type="url"

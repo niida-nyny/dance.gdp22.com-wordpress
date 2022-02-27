@@ -1245,6 +1245,17 @@ ul li:hover ul{
 .wpuf-el {
   display: block;
 }
+.tribe-section-event-status {
+  /* display: none; */
+}
+
+.tribe-community-events-list td .row-actions a, .tribe-community-events-list td .row-actions a:active, .tribe-community-events-list td .row-actions a:visited {
+  /* color: var(--tec-color-text-secondary); */
+  /* color: red;
+  font-weight: bold; */
+
+  /* 注意　テーマの外観 CSSに記載 */
+  }
 
 /*---------------------------------
   User frontend用
@@ -1278,5 +1289,4 @@ ul li:hover ul{
   box-sizing: border-box;
   background-color: #65cfcf;
 
-}
 }
