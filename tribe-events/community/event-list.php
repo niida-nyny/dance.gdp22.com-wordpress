@@ -29,14 +29,15 @@ $columns = tribe_community_events_list_columns();
  * @param array $blocked
  */
 $blocked_columns = apply_filters( 'tribe_community_events_list_columns_blocked', [ 'title' ] );
+	
 ?>
 
-<h2 class="tribe-community-events-list-title"><?php echo esc_html__( 'My Events', 'tribe-events-community' ); ?></h2>
+<h2 class="tribe-community-events-list-title"><?php echo esc_html__( 'このアカウントで作成したイベント', 'tribe-events-community' ); ?></h2>
 <a
 	class="tribe-button tribe-button-primary add-new"
 	href="<?php echo esc_url( tribe_community_events_add_event_link() ); ?>"
 >
-	<?php echo apply_filters( 'tribe_community_events_add_event_label', __( 'Add New', 'tribe-events-community' ) ); ?>
+	<?php echo apply_filters( 'tribe_community_events_add_event_label', __( '新規追加', 'tribe-events-community' ) ); ?>
 </a>
 
 
@@ -67,7 +68,7 @@ do_action( 'tribe_community_events_before_list_navigation' );
 				class="table-menu-btn button tribe-button tribe-button-tertiary tribe-button-activate"
 				href="#"
 			>
-				<?php echo apply_filters( 'tribe_community_events_list_display_button_text', __( 'Display Option', 'tribe-events-community' ) ); ?>
+				<?php echo apply_filters( 'tribe_community_events_list_display_button_text', __( '表示オプション', 'tribe-events-community' ) ); ?>
 			</a>
 		<?php endif; ?>
 
@@ -88,8 +89,25 @@ do_action( 'tribe_community_events_before_list_navigation' );
 							for="<?php echo sanitize_html_class( 'tribe-toggle-column-' . $column_slug ); ?>"
 						>
 							<input class="tribe-toggle-column" type="checkbox" id="<?php echo sanitize_html_class( 'tribe-toggle-column-' . $column_slug ); ?>"  checked />
-							<?php echo esc_html( $column_label ); ?>
-						</label>
+
+							<?php 
+							if ($column_label === 'Publish status') {
+								echo '公開設定';
+							} elseif ($column_label === 'Title') {
+								echo 'レッスン&amp;イベント名';
+							} elseif ($column_label === 'Category') {
+								echo 'カテゴリー';
+							} elseif ($column_label === 'Recurring?') {
+								echo '繰り返し';
+							} elseif ($column_label === 'Start Date') {
+								echo '開始時間';
+							} elseif ($column_label === 'End Date') {
+								echo '終了時間';
+							} else {
+								echo esc_html( $column_label ); 
+							}
+								?>							
+								</label>
 					</li>
 				<?php endforeach; ?>
 			</ul>
@@ -123,7 +141,23 @@ do_action( 'tribe_community_events_before_list_table' );
 							data-condition-is-checked
 							class="tribe-dependent column-header <?php echo sanitize_html_class( 'column-header-' . $column_slug ); ?>"
 						>
-							<?php echo esc_html( $column_label ); ?>
+							<?php 
+							if ($column_label === 'Publish status') {
+								echo '公開設定';
+							} elseif ($column_label === 'Title') {
+								echo 'レッスン&amp;イベント名';
+							} elseif ($column_label === 'Category') {
+								echo 'カテゴリー';
+							} elseif ($column_label === 'Recurring?') {
+								echo '繰り返し';
+							} elseif ($column_label === 'Start Date') {
+								echo '開始時間';
+							} elseif ($column_label === 'End Date') {
+								echo '終了時間';
+							} else {
+								echo esc_html( $column_label ); 
+							}
+								?>
 						</th>
 					<?php endforeach; ?>
 				</tr>
@@ -160,7 +194,7 @@ do_action( 'tribe_community_events_before_list_table' );
 		if ( isset( $_GET['eventDisplay'] ) && 'past' === $_GET['eventDisplay'] ) {
 			$text = esc_html__( 'You have no past %s', 'tribe-events-community' );
 		} else {
-			$text = esc_html__( 'You have no upcoming %s', 'tribe-events-community' );
+			$text = esc_html__( '現在の日程以降のイベントはありません。 %s', 'tribe-events-community' );
 		}
 		echo sprintf( $text, $events_label_plural_lowercase );
 		?>

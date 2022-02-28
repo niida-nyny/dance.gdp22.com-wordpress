@@ -1246,7 +1246,7 @@ ul li:hover ul{
   display: block;
 }
 .tribe-section-event-status {
-  /* display: none; */
+  display: none;
 }
 
 .tribe-community-events-list td .row-actions a, .tribe-community-events-list td .row-actions a:active, .tribe-community-events-list td .row-actions a:visited {
@@ -1259,6 +1259,12 @@ ul li:hover ul{
   /* 注意　テーマの外観 CSSに記載 */
   }
 
+  .tribe-dropdown.select2-container .select2-results ul .select2-results__option {
+    /* font-size: var(--tec-font-size-2);
+    margin: 0;
+    padding: var(--tec-spacer-1);
+    background-color: #ada9a9; */
+    }
 /*---------------------------------
   User frontend用
 ---------------------------------*/

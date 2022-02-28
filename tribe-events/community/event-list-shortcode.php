@@ -36,7 +36,7 @@ $columns = tribe_community_events_list_columns();
  */
 $blocked_columns = apply_filters( 'tribe_community_events_list_columns_blocked', [ 'title' ] );
 ?>
-<h2 class="tribe-community-events-list-title"><?php echo esc_html__( 'My Events', 'tribe-events-community' ); ?></h2>
+<h2 class="tribe-community-events-list-title"><?php echo esc_html__( 'このアカウントで作成したイベント', 'tribe-events-community' ); ?></h2>
 <a class="tribe-button tribe-button-primary add-new" href="<?php echo esc_url( tribe_community_events_add_event_link() ); ?>">
 	<?php
 	/**

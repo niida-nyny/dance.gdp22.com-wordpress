@@ -97,6 +97,10 @@ if ( ! empty( $taxonomy_label ) ) {
 		// echo esc_html( $taxonomy_label ); ?>
 		レッスン・イベントのジャンルやスタイルなど</h3>
 		<span>複数選択可</span>
+		<p>下記にないダンスの種類を追加希望の方は
+			<a href="https://dance.gdp22.com/contact">
+				お問い合わせ</a>
+				ください</p>
 		<?php echo tribe_community_required_field_marker( "tax_input.$taxonomy" ); ?>
 	</div>
 
