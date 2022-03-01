@@ -41,8 +41,20 @@ if ( ! isset( $event ) ) {
 			// printf( esc_html__( '%s Details', 'tribe-events-community' ), $venue_label_singular );
 			// echo tribe_community_required_field_marker( 'venue' );
 			?>
-			会場詳細
+			レッスン（イベント）会場詳細
 		</h3>
+		<p>下記の「Create or Find会場」をクリックして会場を選択してください。</p>
+		<p>
+		・「Create or Find会場」：新規に会場を登録する。もしくは検索できます。フォームの空欄に記入してください。
+		<br><span>※日本語入力できない場合はコピペしてください。</span><br>
+		・「My会場」：過去に登録したことのある会場から選択<br>
+		・「会場利用可能です：他の人が作成した会場を選択できます<br>
+		</p>
+		<!-- <ul>
+			<li>「Create or Find会場」：新規に会場を登録する。もしくは検索</li>
+			<li>「My会場」：過去に登録したことのある会場から選択</li>
+			<li>「会場利用可能です＿：他の人が作成した会場を選択できます</li>
+		</ul> -->
 	</div>
 
 	<?php

@@ -27,7 +27,7 @@ $image_label  = sprintf( __( '%s Image', 'tribe-events-community' ), tribe_get_e
 	<div class="tribe-section-header">
 		<h3><?php 
 		// echo esc_html( $image_label ); ?>
-		イベント画像(Image)</h3>
+		イベントフライヤー画像などアップロード(Image Upload)</h3>
 	</div>
 
 	<?php
