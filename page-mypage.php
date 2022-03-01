@@ -27,7 +27,7 @@ get_header();
 
   <?php if(is_user_logged_in()): ?>
     
-    <article class="Single">
+    <article class="Single mypage">
       <div class="Single__inner inner">
         <header class="Single__header middle">
           <p class="right">
@@ -41,16 +41,123 @@ get_header();
           <div class="Single__body" id="acMenu">
             <h3>お気に入りを表示</h3>
             <dl class="toggle">
-              <dt>レッスン</dt>
-              <dd></dd>
-              <dt>イベント</dt>
-              <dd></dd>
+              
+
+
+              <dt>最新情報</dt>
+              <dd>
+                <?php 
+                // echo do_shortcode('[user_favorites include_thumbnails ="true" include_buttons ="true" post_type=”post” text=”お気に入りをクリア”]'); ?>
+                <?php 
+                    $filters = array(
+                      'post_type' => array(
+                        'post'
+                      ),
+                      'status' => array(
+                        'publish', 
+                        'future'
+                      ),
+                      // 'terms' => array(
+                      //   'category' => array(
+                      //     'news', 
+                      //     'updates'
+                      //   ),
+                      //   'recipe-type' => array(
+                      //     'side-item',
+                      //     'dessert'
+                      //   )
+                      // )
+                    );
+                    the_user_favorites_list($user_id = null, $site_id = null, $include_links = true, $filters = $filters, $include_thumbnails = true, $thumbnail_size = 'thumbnail',);
+                  ?>                 
+              </dd>
+              
+            <dt>レッスン&イベント</dt>
+              <dd>
+                <?php 
+                  // $filters = array(
+                    // 'post_type' => array(TribeEvents::POSTTYPE)
+                  // );
+                  // $filters = array(
+                  //   'post_type' => TribeEvents::POSTTYPE,
+                  //   'status' => 'publish'
+                  // );
+                  // the_user_favorites_list($user_id = null, $site_id = null, $include_links = true, $filters = $filters, $include_thumbnails = true);
+                  ?>
+                <?php 
+                    $filters = array(
+                      'post_type' => array(
+                        TribeEvents::POSTTYPE
+                      ),
+                      'status' => array(
+                        'publish', 
+                        'future'
+                      ),
+                      // 'terms' => array(
+                      //   'category' => array(
+                      //     'news', 
+                      //     'updates'
+                      //   ),
+                      //   'recipe-type' => array(
+                      //     'side-item',
+                      //     'dessert'
+                      //   )
+                      // )
+                    );
+                    the_user_favorites_list($user_id = null, $site_id = null, $include_links = true, $filters = $filters, $include_thumbnails = true, $thumbnail_size = 'thumbnail');
+                  ?> 
+              </dd>
               <dt>場所</dt>
-              <dd></dd>
-              <dt>場所</dt>
-              <dd></dd>
-              <dt>インストラクター</dt>
-              <dd></dd>
+              <dd>
+                <?php 
+                $filters = array(
+                  'post_type' => array(
+                    TribeEvents::VENUE_POST_TYPE
+                  ),
+                  'status' => array(
+                    'publish', 
+                    'future'
+                  ),
+                  // 'terms' => array(
+                  //   'category' => array(
+                  //     'news', 
+                  //     'updates'
+                  //   ),
+                  //   'recipe-type' => array(
+                  //     'side-item',
+                  //     'dessert'
+                  //   )
+                  // )
+                );
+                the_user_favorites_list($user_id = null, $site_id = null, $include_links = true, $filters = $filters, $include_thumbnails = true, $thumbnail_size = 'thumbnail');
+                  ?> 
+              </dd>
+              <dt>インストラクター・DJ・主催者など</dt>
+              <dd>
+                <?php 
+                $filters = array(
+                  'post_type' => array(
+                    TribeEvents::ORGANIZER_POST_TYPE
+                  ),
+                  'status' => array(
+                    'publish', 
+                    'future'
+                  ),
+                  // 'terms' => array(
+                  //   'category' => array(
+                  //     'news', 
+                  //     'updates'
+                  //   ),
+                  //   'recipe-type' => array(
+                  //     'side-item',
+                  //     'dessert'
+                  //   )
+                  // )
+                );
+                the_user_favorites_list($user_id = null, $site_id = null, $include_links = true, $filters = $filters, $include_thumbnails = true, $thumbnail_size = 'thumbnail');
+
+      ?>
+              </dd>
             </dl>
           </div>
         </div>
@@ -63,7 +170,7 @@ get_header();
         <div class="Single__body" id="acMenu">
           <h3>ユーザー情報変更</h3>
           <div class="toggle">
-            <?php  echo do_shortcode( ' [wpuf_profile type="profile" id="513"]' ); ?>
+            <?php  echo do_shortcode( '[wpuf_profile type="profile" id="513"]' ); ?>
           </div>
         </div>
         </div>

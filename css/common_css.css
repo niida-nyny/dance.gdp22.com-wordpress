@@ -1298,3 +1298,24 @@ ul li:hover ul{
   background-color: #65cfcf;
 
 }
+
+/*---------------------------------
+  Favorite用
+---------------------------------*/
+.simplefavorite-button {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  /* background-color: #ee869f;
+  border-color: #ee869f; */
+  /* color: #ffffff; */
+  font-size: 1em;
+  padding: 10px;
+  border-radius: 17px;
+}
+/*---------------------------------
+  マイページ
+---------------------------------*/
+.mypage li {
+  display: block;
+}
