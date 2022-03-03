@@ -1,11 +1,22 @@
                 <div class="ArchiveList__item-good">
-                  <div class="good beginner">
-                    <figure>
-                      <img src="<?php echo get_theme_file_uri('/img/beginner.png'); ?>" alt="">
+                  <figure>
+                    <a href="https://dance.gdp22.com/how-to-use">
+                      <img src="<?php echo get_theme_file_uri('/img/pono_front_good.png'); ?>" alt="">
+                    </a>
+                  </figure>
+                  <figure>
+                    <a href="https://dance.gdp22.com/members">
+                      <img src="<?php echo get_theme_file_uri('/img/pono_front_member.png'); ?>" alt="">
+                    </a>
+                  </figure>
+                <!-- <figure>
+                      <img style="transform: scale(-1, 1);" src="<?php echo get_theme_file_uri('/img/beginner.png'); ?>" alt="">
                     </figure>
+                <div class="good beginner">
+
                     <p>
-                      【初心者マーク】このサイトの<br>
-                      使い方はコチラ
+                      初めての方必見！ <br>
+                      <img src="https://dance.gdp22.com/wp-content/uploads/cropped-logo.png" alt="" width="200px">の使い方
                     </p>
                   </div>
                   <div class="good good-point">
@@ -15,5 +26,5 @@
                     <p>【アイコン】会員登録すると<br>
                     こんなに便利！
                     </p>
-                  </div>
+                  </div> -->
               </div>

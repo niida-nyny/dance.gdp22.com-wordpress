@@ -1283,7 +1283,7 @@ ul li:hover ul{
 .ArchiveList__item-good .good {
   display: flex;
   border: #666 1px solid; 
-  padding:40px;
+  padding: 0 40px;
 
 }
 
