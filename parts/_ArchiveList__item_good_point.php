@@ -1,11 +1,11 @@
                 <div class="ArchiveList__item-good">
                   <figure>
-                    <a href="https://dance.gdp22.com/how-to-use">
+                    <a href="https://dance.gdp22.com/how-to-use" class="ArchiveList__link">
                       <img src="<?php echo get_theme_file_uri('/img/pono_front_good.png'); ?>" alt="">
                     </a>
                   </figure>
                   <figure>
-                    <a href="https://dance.gdp22.com/members">
+                    <a href="https://dance.gdp22.com/members" class="ArchiveList__link">
                       <img src="<?php echo get_theme_file_uri('/img/pono_front_member.png'); ?>" alt="">
                     </a>
                   </figure>

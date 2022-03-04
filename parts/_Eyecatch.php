@@ -5,25 +5,25 @@
 <div class="Eyecatch">
   <div id="js-slick" class="Eyecatch__list">
     <div class="Eyecatch__item">
-      <a class="Eyecatch__link" href="<?php echo esc_url(home_url('/')); ?>">
+      <a class="Eyecatch__link ArchiveList__link" href="<?php echo esc_url(home_url('/')); ?>">
         <img class="Eyecatch__img" src="<?php echo esc_url(get_theme_file_uri('/img/eyecatch01.jpg')); ?>">
       </a>
     </div>
 
     <div class="Eyecatch__item">
-      <a class="Eyecatch__link" href="<?php echo esc_url(home_url('/')); ?>">
+      <a class="Eyecatch__link ArchiveList__link" href="<?php echo esc_url(home_url('/')); ?>">
         <img class="Eyecatch__img" src="<?php echo esc_url(get_theme_file_uri('/img/eyecatch02.jpg')); ?>">
       </a>
     </div>
 
     <div class="Eyecatch__item">
-      <a class="Eyecatch__link" href="<?php echo esc_url(home_url('/questions')); ?>">
+      <a class="Eyecatch__link ArchiveList__link" href="<?php echo esc_url(home_url('/questions')); ?>">
         <img class="Eyecatch__img" src="<?php echo esc_url(get_theme_file_uri('/img/eyecatch03.jpg')); ?>">
       </a>
     </div>
 
     <div class="Eyecatch__item">
-      <a class="Eyecatch__link" href="<?php echo esc_url(home_url('/events')); ?>">
+      <a class="Eyecatch__link ArchiveList__link" href="<?php echo esc_url(home_url('/events')); ?>">
         <img class="Eyecatch__img" src="<?php echo esc_url(get_theme_file_uri('/img/eyecatch04.jpg')); ?>">
       </a>
     </div>
