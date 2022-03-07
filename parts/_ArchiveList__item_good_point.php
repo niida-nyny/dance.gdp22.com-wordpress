@@ -1,6 +1,6 @@
                 <div class="ArchiveList__item-good">
                   <figure>
-                    <a href="https://dance.gdp22.com/how-to-use" class="ArchiveList__link">
+                    <a href="https://dance.gdp22.com/philosophy" class="ArchiveList__link">
                       <img src="<?php echo get_theme_file_uri('/img/pono_front_good.png'); ?>" alt="">
                     </a>
                   </figure>

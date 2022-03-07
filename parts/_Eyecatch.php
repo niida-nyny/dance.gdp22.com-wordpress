@@ -51,7 +51,7 @@
         asNavFor:'#js-slick-thumbnail',
         accessibility: true,
         autoplay: true,
-        autoplaySpeed: 10000,
+        autoplaySpeed: 15000,
         centerMode: true,
         // customPaging: true,
         dots: true,
