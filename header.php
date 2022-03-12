@@ -32,8 +32,7 @@
 <?php /**  FB用SDK*  */ ?>
 
 
-  <?php 
-  wp_head(); ?>
+  <?php wp_head(); ?>
 </head>
 
 <body>

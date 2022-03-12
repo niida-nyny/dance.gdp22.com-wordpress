@@ -91,6 +91,11 @@ add_action('wp_enqueue_scripts', function () {
     'aos',
     'https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css'
   );
+    // Bootstrap
+    wp_enqueue_style(
+      'bootstrap',
+      'https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css'
+    );
   // 共通CSS
   wp_enqueue_style(
     'common_css',
@@ -609,3 +614,36 @@ function change_the_title() {
 // function change_the_title() {
 //   return 'Your New Title Goes Here';
 // }
+
+
+/**
+ * 投稿のラベルを変更します。
+ */
+function custom_post_labels( $labels ) {
+	$labels->name = 'お知らせ'; // 投稿
+	$labels->singular_name = 'お知らせ'; // 投稿
+	$labels->add_new = '新規追加'; // 新規追加
+	$labels->add_new_item = 'お知らせを追加'; // 新規投稿を追加
+	$labels->edit_item = '投稿の編集'; // 投稿の編集
+	$labels->new_item = '新規お知らせ'; // 新規投稿
+	$labels->view_item = 'お知らせを表示'; // 投稿を表示
+	$labels->search_items = 'お知らせを検索'; // 投稿を検索
+	$labels->not_found = 'お知らせが見つかりませんでした。'; // 投稿が見つかりませんでした。
+	$labels->not_found_in_trash = 'ゴミ箱内にお知らせが見つかりませんでした。'; // ゴミ箱内に投稿が見つかりませんでした。
+	$labels->parent_item_colon = ''; // (なし)
+	$labels->all_items = 'お知らせ一覧'; // 投稿一覧
+	$labels->archives = 'お知らせアーカイブ'; // 投稿アーカイブ
+	$labels->insert_into_item = 'お知らせに挿入'; // 投稿に挿入
+	$labels->uploaded_to_this_item = 'このお知らせへのアップロード'; // この投稿へのアップロード
+	$labels->featured_image = 'アイキャッチ画像'; // アイキャッチ画像
+	$labels->set_featured_image = 'アイキャッチ画像を設定'; // アイキャッチ画像を設定
+	$labels->remove_featured_image = 'アイキャッチ画像を削除'; // アイキャッチ画像を削除
+	$labels->use_featured_image = 'アイキャッチ画像として使用'; // アイキャッチ画像として使用
+	$labels->filter_items_list = 'お知らせリストの絞り込み'; // 投稿リストの絞り込み
+	$labels->items_list_navigation = 'お知らせリストナビゲーション'; // 投稿リストナビゲーション
+	$labels->items_list = 'お知らせリスト'; // 投稿リスト
+	$labels->menu_name = 'お知らせ'; // 投稿
+	$labels->name_admin_bar = 'お知らせ'; // 投稿
+	return $labels;
+}
+add_filter( 'post_type_labels_post', 'custom_post_labels' );

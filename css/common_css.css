@@ -513,7 +513,7 @@ ul > li > a{
   letter-spacing: -0.05em;
 }
 ul > li > span{
-  margin-left: 1.2em;
+  /* margin-left: 1.2em; */
 }
 ul > li:hover > a{
   background-color: #ffd4d4;

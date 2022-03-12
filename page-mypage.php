@@ -30,12 +30,7 @@ get_header();
     <article class="Single mypage">
       <div class="Single__inner inner">
         <header class="Single__header middle">
-          <p class="right">
-            <a href="https://dance.gdp22.com/mypage?action=logout">
-            <button class="btn">
-              ログアウトする</a>
-            </button>  
-          </p>
+          
           <span>下記をクリックすると内容が表示されます。</span>
           </header>
           <div class="Single__body" id="acMenu">
