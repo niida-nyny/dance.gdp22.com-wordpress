@@ -171,14 +171,24 @@ get_header();
         </div>
       </article>      
 
-      <article class="Single">
+      <article class="Single Single-mypage-organize">
         <div class="Single__inner inner">
             <header class="Single__header">
             </header>
             <div class="Single__body" id="acMenu">
                 <h3>主催する</h3>
                   <div class="toggle">
+                    <div class="text-center mb-5">
+                      <a target="_blank" class="btn btn-primary" href="https://docs.google.com/presentation/d/14OdGd6UucavluoiuDu36EOjTVvY56fa8LLrIfFGBsqw/edit?usp=sharing">レッスン・イベントの入力マニュアルはここをクリック</a>
+                      <div>
+                        <p>スマホの方はQRコードからアクセス</p>
+                        <img src="<?php echo get_theme_file_uri('/img/event_manual.png'); ?>" alt="">  
+                      </div>
+                    </div>
                     <?php  echo do_shortcode( ' [tribe_community_events view="my_events"]' ); ?>
+
+                    <h2 class="mt-5 bg-primary">募集&amp;依頼について</h2>
+                    <?php echo do_shortcode('[wpuf_dashboard post_type="recruit"]'); ?>
                   </div>
             </div>
         </div>

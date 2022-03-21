@@ -6,7 +6,48 @@
     <div class="Box__inner inner">
       <header class="Box__header">
 
-        <h2 class="Box__mainTitle">
+        <?php /** 新規追加のリンク*  */ ?>
+        <div class="card mb-5 text-center">
+          <div class="card-header bg-primary text-white ">新規投稿はこちら！！</div>
+          <div class="card-body text-left px-3">
+
+            <!-- <h5 class="card-title mb-3">ぜひあなたの『ダンスに関する様々な「ニーズ」をマッチング』に投稿してください</h5> -->
+            <p class="card-text mb-3">
+              このページはダンスに関する様々な情報、知識、技術、作品、物品、仲間、人材等々<u><span class="text-black bg-keikou"><strong>”必要としている人”</strong></span>と<span class="text-black bg-keikou p-2"><strong>”提供したい人”</strong></span>を結びつけるためのプラットホーム</u>です。
+            </p>
+
+            <p class="card-text mb-3">
+              自分が必要としているものを、譲渡、交換、購入することによって、人類は他の動物では成し得ない発展を遂げました。
+            </p>
+
+            <p class="card-text mb-5">
+              このサイトの基本理念に近づくために、ダンスに関する様々なモノを<u><span class="text-black bg-keikou"><strong>持っている人</strong></span>は、それを自分だけのものにせず、<span class="text-black bg-keikou"><strong>持たない人</strong></span>のためにぜひ役立てて</u>ください。
+            </p>
+            
+            <p>使用例）</p>
+            <ul class="list-group list-group-flush checked_list mx-3">
+              <li class="list-group-item">◯月×日開始のクローズドクラスのメンバー募集</li>
+              <li class="list-group-item">センシュアルバチャータ パフォーマンスクラス あと男性2名募集</li>
+              <li class="list-group-item">◯月×日はキャンペーンでプライベートレッスンがお得！</li>
+              <li class="list-group-item">振り付けを売りたし、書いたし</li>
+              <li class="list-group-item">センシュアルバチャータ パフォーマンスクラス あと男性2名募集</li>
+
+              <li class="list-group-item">チームのpvを作りたいので撮影、編集できる人募集</li>
+              <li class="list-group-item">イベントの受付などをしてくれるボランティアスタッフ募集</li>
+              <li class="list-group-item">イベントでパフォーマンスができるグループ募集</li>
+              <li class="list-group-item">パフォーマンス練習したけど発表する場所がない、発表できる場所を募集</li>
+            </ul>
+            <div class="text-center">
+              <a href="https://dance.gdp22.com/aaa-2170" class="btn btn-primary">
+                ダンスに関する様々な「ニーズ」をマッチングに投稿する
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <?php echo do_shortcode('[searchandfilter id="2181"]'); ?>
+
+        <h2 class="Box__mainTitle-recruit">
           <?php the_archive_title(); ?>
           <?php echo $wp_query->found_posts; ?>件</h2>
       </header>

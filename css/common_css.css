@@ -170,7 +170,7 @@ table {
 ---------------------------------*/
 body {
   background-color: #eee;
-  color: #000;
+  color: #575555;
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic,
     "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo,
     sans-serif;
@@ -479,10 +479,7 @@ height: 100vh; */
 }
 
 .Nav__nav-sub {
-
-  z-index: 2000;
-
-
+  /* z-index: 2000; */
 }
 
 .topPage {
@@ -499,10 +496,12 @@ border-right: solid 1px #efefef;
 
 .Nav__nav ul {
   font-size: 20px;
+  display: flex;
+  justify-content: center;
 }
 
-ul > li{
-  display: inline-block;
+.Nav__nav ul > li{
+  display: block;
   margin-right: 10px;
 }
 ul > li > a{
@@ -523,17 +522,31 @@ ul > li:hover > a{
 
 /* Submenu */
 
+/* .Nav__nav  */
 ul li ul{
-  position: absolute;
+  position: absolute; */
   /*top: 55px;
   left: 0;*/
 }
-ul li ul li{
-  display: block;
+.Nav__nav ul li li{
+  /* display: block; */
+  height: 0;
+	overflow: hidden;
+  line-height: 0.8em;
+	/* transition: all .5s 0s ease-in; */
+
 }
+
+.Nav__nav ul li:hover > ul > li {
+	height: 2rem;
+	overflow: visible;
+  color: #fff;
+  border: none;
+}
+
 ul li ul li a{
-  background-color: #008080;
-  color: #444;
+  background-color: #73e4e4;
+  color: #2450c7;
   padding: 10px 20px;
 }
 li ul li a:hover{
@@ -542,6 +555,9 @@ li ul li a:hover{
 .sub-menu {
   padding-left: 0;
   margin-left: 0;
+}
+
+.sub-menu li {
 }
 
 
@@ -585,7 +601,7 @@ ul li:hover ul{
 }
 .HeaderPC__link,
 .menu-item a {
-  color: #65cfcf;
+  /* color: #499c9c; */
 }
 
 .HeaderPC__box p {
@@ -645,8 +661,18 @@ ul li:hover ul{
   font-weight: 400;
   margin: 0;
   /* padding: 1em 0 0; */
-  color: #65cfcf;
+  color: #2450c7;
 }
+
+.Box__mainTitle-recruit {
+  font-size: 40px;
+  font-weight: 400;
+  margin: 0;
+  /* padding: 1em 0 0; */
+  color: #65cfcf;
+  color: #ad2687;
+}
+
 .Box__header {
   padding: 1em 0;
 }
@@ -749,7 +775,7 @@ ul li:hover ul{
   flex:1;
 }
 .ArchiveList__title {
-  color: #65cfcf;
+  color: #6f6f7;
   font-size: 1.2em;
   font-weight: bold;
   margin: 0 0 0;
@@ -785,7 +811,7 @@ ul li:hover ul{
 .TaxsonomyList__span,
 .TaxonomyList__name {
   display: block;
-  background-color: #ccc;
+  /* background-color: #ccc; */
   border-radius: 6px;
   color: #333;
   font-size: 70%;
@@ -1076,14 +1102,24 @@ ul li:hover ul{
   Search & Filter Pro用
 ---------------------------------*/
 
+.searchandfilter {
+/* background-color: azure; */
+margin: 0 auto 70px;
+border: 1px solid #0062cc;
+}
+
 
 .searchandfilter > ul > li {
 	display: inline-block;
 	vertical-align: top;
-	/* padding: 0 20px; */
+	padding: 0;
   width: 100%;
   margin-bottom: 10px;
 }
+
+.searchandfilter ul li li {
+  padding: 5px 10px 0;
+  }
 
 .searchandfilter>ul>li[data-sf-combobox="1"] label {
   /* display: inline-block; */
@@ -1095,8 +1131,8 @@ ul li:hover ul{
   width: 100%;
   height: 100%;
   padding: 10px 20px;
-  margin: 5px 0 0 0;
-  background-color: #008080;
+  /* margin: 5px 0 0 0; */
+  background-color: #0062cc;
   color: #fff;
 }
 
@@ -1126,15 +1162,15 @@ ul li:hover ul{
 }
 
 .searchandfilter ul li.sf-field-submit {
-  /* margin-top: 30px; */
+  margin-top: 20px;
 }
 
 .sf-field-submit > input{
-  background-color: #008080;
+  background-color: #0062cc;
   color: white;
-  font-size: 1.3em;
-  padding: 10px;
-  margin: auto;
+  font-size: 1em;
+  padding: 6px 22px;
+  margin: 10px auto;
   border-radius: 10px;
 }
 
@@ -1170,6 +1206,79 @@ ul li:hover ul{
   text-align: center;
 }
 
+/*---------------------------------
+  ニーズをマッチング
+---------------------------------*/
+
+.checked_list li{
+  position: relative;
+  padding-left: 15px;
+  line-height: 1em;
+}
+
+.checked_list li:before {
+  content: "";
+  position: absolute;
+  top: 1em;
+  left: 0;
+  -webkit-transform: rotate(50deg);
+  -ms-transform: rotate(50deg);
+  transform: rotate(50deg);
+  width: 5px;
+  height: 10px;
+  border-right: 3px solid #8b6b4e;
+  border-bottom: 3px solid #8b6b4e;
+}
+
+textarea {
+  width:100%;
+  }
+
+.wpuf-submit-button {
+  background-color: #0062cc;
+  color: #ffffff;
+  padding: 7px 20px;
+  border-radius: 12px;
+}
+
+.TaxonomyList__item a:hover {
+  opacity: 0.8;
+}
+
+.-term2140 .TaxonomyList__link {
+  background-color: #90f2fa;
+}
+.-term2141 .TaxonomyList__link {
+  background-color: #90faa7;
+}
+.-term2142 .TaxonomyList__link {
+  background-color: #90d3fa;
+}
+.-term2143 .TaxonomyList__link {
+  background-color: #a790fa;
+}
+.-term2144 .TaxonomyList__link {
+  background-color: #fa90d1;
+}
+.-term2145 .TaxonomyList__link {
+  background-color: #faea90;
+}
+.-term2146 .TaxonomyList__link {
+  background-color: #fa9090;
+}
+.-term2147 .TaxonomyList__link {
+  background-color: #90face;
+}
+
+/*---------------------------------
+  関連記事 YARPP用
+---------------------------------*/
+.Single .yarpp-related h3 {
+  /* font-size: 100%;
+  font-weight: 700;
+  margin: 0; */
+  padding: 5px 0 5px 20px;
+  }
 /*---------------------------------
   カスタム投稿タイプ　レッスン用
 ---------------------------------*/
@@ -1230,23 +1339,56 @@ ul li:hover ul{
 }
 
 .the-events-calendar-category-list {
-  display: flex;
+  display: flex; 
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
 }
- 
+
 .the-events-calendar-category-list ol li {
   display: inline-block;
   list-style: none;
   padding: 0.5rem 1rem;
 }
 
+.select2-results__options {
+  display: flex;
+}
+
+.select2-results__options li ul {
+  height: 0;
+	overflow: hidden;
+}
+
+.select2-results__options li li{
+  height: 0;
+	overflow: hidden;
+	transition: .5s;
+}
+
+
+.select2-results__options li:hover > ul {
+	height: 2rem;
+	overflow: visible;
+}
+
+.select2-results__options li:hover > ul > li {
+	height: 2rem;
+	overflow: visible;
+}
+
+
 .wpuf-el {
   display: block;
 }
 .tribe-section-event-status {
   display: none;
+}
+
+/* イベント一覧 */
+.tribe-events-calendar-list__event-featured-image-wrapper img {
+  height: 150px;
+  margin: 0 auto;
 }
 
 .tribe-community-events-list td .row-actions a, .tribe-community-events-list td .row-actions a:active, .tribe-community-events-list td .row-actions a:visited {
@@ -1271,6 +1413,62 @@ ul li:hover ul{
 .login .message > p {
   display:none;
 }
+
+
+/*---------------------------------
+  告知＆依頼 recruit
+---------------------------------*/
+.recruit_category {
+  height: 150px;
+}
+
+u {
+  /* border-bottom: solid 5px black; */
+}
+
+.markerDeepYellow,
+.bg-keikou {
+  background:linear-gradient(transparent 0%, #ffff66 0%);
+  padding: 0.5rem 0;
+  color: black;
+  }
+
+.underline {
+  text-decoration: underline;
+  color: red;
+  
+}
+
+/*---------------------------------
+  wp user frontend
+---------------------------------*/
+
+body ul.wpuf-form li .wpuf-fields ul.wpuf-category-checklist {
+  /* list-style: none;
+  margin: 0;
+  padding: 0; */
+  display: block;
+  margin-bottom: 10px;
+  }
+
+  .wpuf-message {
+    background: #fcf8e3;
+    border: 1px solid #faebcc;
+    color: #8a6d3b;
+    margin: 10px 0 20px 0;
+    padding: 10px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    font-size: 13px;
+    }
+
+    .wpuf-message {
+      color: #842029;
+      background-color: #f8d7da;
+      border-color: #f5c2c7;
+      font-size: 1.5em;
+    }
 
 /*---------------------------------
   フロントページ 特徴
@@ -1306,16 +1504,112 @@ ul li:hover ul{
   box-shadow: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
-  /* background-color: #ee869f;
-  border-color: #ee869f; */
-  /* color: #ffffff; */
-  font-size: 1em;
-  padding: 10px;
+  font-size: 0.8em;
+  padding: 5px 10px;
+  margin: 30px 0;
   border-radius: 17px;
 }
+
 /*---------------------------------
   マイページ
 ---------------------------------*/
 .mypage li {
   display: block;
 }
+
+.Single-mypage-organize  .page-head {
+  display: none;
+}
+
+/*---------------------------------
+  この記事を書いた人
+---------------------------------*/
+/*基本パーツ*/
+.author-box{
+  border:2px solid;
+  margin-top:25px;
+  display：flexbox;
+  }
+  .author-name{
+  border-bottom: dotted 1px;
+  padding:6px;
+  }
+  .belle-box{
+  float:left;
+  }
+  .belle-img2{
+  float:left;
+  }
+  .belle-img,.belle-img2{
+  margin:5px;
+  }
+  .belle-info{
+  font-size:13px;
+  padding:5px;
+  overflow: hidden;
+  }
+  .belle-info p {
+    margin: 10px 0;
+  }
+  .belle-info2{
+  font-size:13px;
+  padding:5px;
+  }
+  /* SNSボタンの間隔調整 */
+  .author-sns,.author-sns2{
+  padding:13px;
+  }
+  /* ボタン全体の装飾 */
+  .psns{
+  font-family:'Trebuchet MS',sans-serif;/* 好きなフォントに変えてね */
+  border-radius:50%;
+  display:inline-block;
+  width:40px;
+  height:40px;
+  font-size:22px;
+  transition:.5s;
+  text-decoration:none !important;;
+  }
+  /* ボタンマウスホバー時テキストカラー */
+  .psns:hover{
+  color:#fff !important;
+  }
+  /* Twitter */
+  .ptwitter{
+  border:solid 1px #55acee;
+  color:#55acee;
+  }
+  /* Twitterマウスホバー時 */
+  .ptwitter:hover{
+  border:solid 1px #55acee;
+  background:#55acee;
+  }
+  /* お問い合わせ */
+  .pemail{
+  border:solid 1px #f3981d;
+  color:#f3981d; 
+  }
+  /* お問い合わせマウスホバー時 */
+  .pemail:hover{
+  border:solid 1px #f3981d;
+  background:#f3981d;
+  }
+  /* ボタンの位置 */
+  .pfollow{
+  display:flex;
+  flex-flow:row wrap;
+  }
+  .pfollow2{
+  display:flex;
+  flex-flow:row wrap;
+  max-width:200px;}
+  /* ボタン同士の余白 */
+  .pfollow li,.pfollow2 li{
+  flex:0 0 33%;
+  text-align:center!important;
+  }
+  /* ボタンレイアウト調整 */
+  ul.pfollow,ul.pfollow2{
+  list-style-type:none!important;
+  padding:0!important;
+  }

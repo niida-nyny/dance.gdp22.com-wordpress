@@ -11,8 +11,14 @@
     </div>
 
     <div class="Eyecatch__item">
-      <a class="Eyecatch__link ArchiveList__link" href="<?php echo esc_url(home_url('/')); ?>">
+      <a class="Eyecatch__link ArchiveList__link" href="<?php echo esc_url(home_url('/archives/dance_changes_life/kohin')); ?>">
         <img class="Eyecatch__img" src="<?php echo esc_url(get_theme_file_uri('/img/eyecatch02.jpg')); ?>">
+      </a>
+    </div>
+
+    <div class="Eyecatch__item">
+      <a class="Eyecatch__link ArchiveList__link" href="<?php echo esc_url(home_url('/archives/amazing_movies')); ?>">
+        <img class="Eyecatch__img" src="<?php echo esc_url(get_theme_file_uri('/img/eyecatch05.jpg')); ?>">
       </a>
     </div>
 
@@ -29,12 +35,6 @@
     </div>
 
     <div class="Eyecatch__item">
-      <a class="Eyecatch__link ArchiveList__link" href="<?php echo esc_url(home_url('/archives/amazing_movies')); ?>">
-        <img class="Eyecatch__img" src="<?php echo esc_url(get_theme_file_uri('/img/eyecatch05.jpg')); ?>">
-      </a>
-    </div>
-
-    <div class="Eyecatch__item">
       <a class="Eyecatch__link ArchiveList__link" href="<?php echo esc_url(home_url('/archives/recruit')); ?>">
         <img class="Eyecatch__img" src="<?php echo esc_url(get_theme_file_uri('/img/eyecatch06.jpg')); ?>">
       </a>
@@ -45,9 +45,9 @@
   <div id="js-slick-thumbnail" class="Eyecatch__list-thumbnail">
     <img class="Eyecatch__img" src="<?php echo esc_url(get_theme_file_uri('/img/eyecatch01.jpg')); ?>">
     <img class="Eyecatch__img" src="<?php echo esc_url(get_theme_file_uri('/img/eyecatch02.jpg')); ?>">
+    <img class="Eyecatch__img" src="<?php echo esc_url(get_theme_file_uri('/img/eyecatch05.jpg')); ?>">
     <img class="Eyecatch__img" src="<?php echo esc_url(get_theme_file_uri('/img/eyecatch03.jpg')); ?>">
     <img class="Eyecatch__img" src="<?php echo esc_url(get_theme_file_uri('/img/eyecatch04.jpg')); ?>">
-    <img class="Eyecatch__img" src="<?php echo esc_url(get_theme_file_uri('/img/eyecatch05.jpg')); ?>">
     <img class="Eyecatch__img" src="<?php echo esc_url(get_theme_file_uri('/img/eyecatch06.jpg')); ?>">
   </div>
 

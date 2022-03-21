@@ -13,27 +13,12 @@
             <div class="Single__meta">
 
               <?php
-              set_query_var('taxonomySlug', 'category');
+              set_query_var('taxonomySlug', 'recruit');
               set_query_var('displayLink', true);
               set_query_var('displayCount', true);
               set_query_var('unitName', '件');
               get_template_part('parts/_TaxonomyList');
               ?>
-                  <li class="TaxsonomyList__item">
-                    <a class="TaxsonomyList__link" href="archive.html">
-                      カテゴリ名
-                    </a>
-                  </li>
-                  <li class="TaxsonomyList__item">
-                    <a class="TaxsonomyList__link" href="archive.html">
-                      カテゴリ名
-                    </a>
-                  </li>
-                  <li class="TaxsonomyList__item">
-                    <a class="TaxsonomyList__link" href="archive.html">
-                      カテゴリ名
-                    </a>
-                  </li>
 
             </div>
             <figure class="Single__figure">
@@ -49,30 +34,7 @@
   <?php /***** メインループ終了 *****/ ?>
     </div>
     <div class="Single__footer">
-      <div class="Single__prev">
-        <?php
-        if (get_previous_post()) {
-          previous_post_link(
-            '&larr; 「%link」はこちら',
-            '前の投稿',
-          );
-        } else {
-          echo '前の記事なし';
-        }
-        ?>
-      </div>
-      <div class="Single__next">
-        <?php
-        if (get_next_post()) {
-          next_post_link(
-            '「%link」はこちら &rarr; ',
-            '次の投稿',
-          );
-        } else {
-          echo '次の記事なし';
-        }
-        ?>
-      </div>
+
     </div>
 
   </article>

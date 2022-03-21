@@ -61,9 +61,14 @@ function v($val)
 /**
  * 投稿概要文文字数変更
  */
-add_filter('excerpt_mblength', function () {
-  return 30;
-});
+// add_filter('excerpt_mblength', function () {
+//   return 30;
+// },999);
+
+function custom_excerpt_length( $length ) {
+  return 20;	
+}	
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 /**
  * 投稿概要文省略記号変更
@@ -71,7 +76,6 @@ add_filter('excerpt_mblength', function () {
 add_filter('excerpt_more', function () {
   return '　...続きを読む';
 });
-
 
 /*********************************
   CSS読み込み
@@ -279,25 +283,6 @@ function add_page_column($column_name, $post_id)
 add_filter('manage_pages_columns', 'add_page_column_title');
 add_action('manage_pages_custom_column', 'add_page_column', 10, 2);
 
-/*********************************
-  管理画面投稿一覧にスラッグ表示
- **********************************/
-function add_post_column_title($columns)
-{
-  $columns['slug'] = "スラッグ";
-  return $columns;
-}
-function add_post_column($column_name, $post_id)
-{
-  if ($column_name == 'slug') {
-    $post = get_post($post_id);
-    $slug = $post->post_name;
-    echo esc_attr($slug);
-  }
-}
-add_filter('manage_posts_columns', 'add_post_column_title');
-add_action('manage_posts_custom_column', 'add_post_column', 10, 2);
-
 
 /*********************************
   管理画面メニュー非表示
@@ -346,7 +331,7 @@ function auto_post_slug($slug, $post_ID, $post_status, $post_type)
 {
   if (preg_match('/(%[0-9a-f]{2})+/', $slug)) {
     // $slug = utf8_uri_encode($post_type) . '-' . $post_ID;
-    $slug = 'aaa-' . $post_ID;
+    $slug = 'dance-' . $post_ID;
   }
   return $slug;
 }
@@ -647,3 +632,11 @@ function custom_post_labels( $labels ) {
 	return $labels;
 }
 add_filter( 'post_type_labels_post', 'custom_post_labels' );
+
+
+add_filter( 'wp_lazy_loading_enabled' , '__return_false' );
+
+/**
+ * プロフィールに改行を追加
+ */
+remove_filter('pre_user_description', 'wp_filter_kses');
