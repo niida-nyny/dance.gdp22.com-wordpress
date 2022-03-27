@@ -76,7 +76,8 @@
             // 引数：配列
             //  'theme_location'にメニューの名前
             ?>
-            <?php  echo do_shortcode( ' [events-calendar-search placeholder="Search Events" show-events="5" disable-past-events="false" layout="small"]' ); ?>
+            <?php  
+            // echo do_shortcode( ' [events-calendar-search placeholder="イベントを検索" show-events="5" disable-past-events="false" layout="small"]' ); ?>
   </div>
 </nav>
   <?php get_template_part('parts/_Nav'); ?>

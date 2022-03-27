@@ -331,18 +331,6 @@ max-height: 620px;
 height: 100vh; */
 }
 
-.Hero__ieyasu {
-  background-image: url(../img/ieyasu02.jpeg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  height: 100vh;
-  width: 100%;
-  height: 0;
-  padding-top: 46.67%;
-}
-  }
-
 .Hero__site-branding {
   font-size: 72px;
   line-height:0.8em;
@@ -504,7 +492,7 @@ border-right: solid 1px #efefef;
   display: block;
   margin-right: 10px;
 }
-ul > li > a{
+.Nav__nav ul > li > a{
   padding: 15px 8px;
   display: block;
   font-size: 0.8em;
@@ -901,6 +889,35 @@ ul li:hover ul{
 .Single__body table {
   margin: 1em 0;
 }
+
+/*---------------------------------
+ Single インタビュー
+---------------------------------*/
+.Single__body-interview h1,
+.Single__body-interview h2,
+.Single__body-interview h3,
+.Single__body-interview h4,
+.Single__body-interview h5,
+.Single__body-interview h6 {
+  background-color: #ffc107;
+  color: #212529;
+}
+.Single__body .wp-block-media-text p {
+  margin: 0 0 15px 0;
+}
+
+.link-light > a {
+  color: #ffffff;
+}
+
+.link-light > a:hover {
+  text-decoration: none;
+}
+
+.link-light:hover {
+  opacity: 0.8;
+}
+
 
 /*---------------------------------
  Page
@@ -1569,7 +1586,9 @@ body ul.wpuf-form li .wpuf-fields ul.wpuf-category-checklist {
   font-size:22px;
   transition:.5s;
   text-decoration:none !important;;
+  line-height: 40px;
   }
+
   /* ボタンマウスホバー時テキストカラー */
   .psns:hover{
   color:#fff !important;
@@ -1612,4 +1631,464 @@ body ul.wpuf-form li .wpuf-fields ul.wpuf-category-checklist {
   ul.pfollow,ul.pfollow2{
   list-style-type:none!important;
   padding:0!important;
+  }
+
+
+    /*---------------------------------
+    ---吹き出し---
+    ---------------------------------*/
+
+  .wp-block-media-text.balloon-4536 {
+    grid-template-columns: 100px auto;
+    margin-bottom: 1.5em;
+  }
+  .wp-block-media-text.has-media-on-the-right.balloon-4536 {
+    grid-template-columns: auto 100px;
+  }
+  .balloon-4536.wp-block-media-text {
+    -webkit-box-align: initial;
+    -ms-flex-align: initial;
+    align-items: initial;
+  }
+  .balloon-4536 figure {
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    vertical-align: top;
+  }
+  .balloon-4536 figure img {
+    border-radius: 50%;
+    border: 1px solid #ddd;
+  }
+  .balloon-4536 .wp-block-media-text__content {
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    border: 1px solid #aaa;
+    padding: 2% 4%;
+    position: relative;
+    background-color: #ffffff;
+  }
+  .balloon-4536 .wp-block-media-text__content p:last-child {
+    margin-bottom: 0;
+  }
+  .balloon-4536 .wp-block-media-text__content::before,
+  .balloon-4536 .wp-block-media-text__content::after {
+    position: absolute;
+    content: '';
+    border: 10px solid transparent;
+    top: 25px;
+  }
+  .balloon-4536 .wp-block-media-text__content {
+    margin-left: 20px;
+  }
+  .balloon-4536 .wp-block-media-text__content::before {
+    border-right: 10px solid #aaa;
+    left: -20px;
+  }
+  .balloon-4536 .wp-block-media-text__content::after {
+    border-right: 10px solid #fff;
+    left: -19px;
+  }
+  .balloon-4536.has-media-on-the-right .wp-block-media-text__content {
+    margin-right: 20px;
+    margin-left: 0;
+  }
+  .balloon-4536.has-media-on-the-right .wp-block-media-text__content::before {
+    border-left: 10px solid #aaa;
+    border-right: none;
+    right: -20px;
+    left: 100%;
+  }
+  .balloon-4536.has-media-on-the-right .wp-block-media-text__content::after {
+    border-left: 10px solid #fff;
+    border-right: none;
+    right: -19px;
+    left: calc(100% - 1px);
+  }
+  
+  /*---考え事風---*/
+  .balloon-4536.think .wp-block-media-text__content {
+    border-radius: 30px;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+  }
+  .balloon-4536.think .wp-block-media-text__content::before,
+  .balloon-4536.think.has-media-on-the-right .wp-block-media-text__content::before {
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    top: 15px;    
+  }
+  .balloon-4536.think .wp-block-media-text__content::after,
+  .balloon-4536.think.has-media-on-the-right .wp-block-media-text__content::after {
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    width: 4px;
+    height: 4px;
+    top: 20px;
+  }
+  .balloon-4536.think .wp-block-media-text__content::before {
+    left: -12px;
+  }
+  .balloon-4536.think .wp-block-media-text__content::after {
+    left: -19px;
+  }
+  .balloon-4536.think.has-media-on-the-right .wp-block-media-text__content::before {
+    right: -12px;
+    left: initial;
+  }
+  .balloon-4536.think.has-media-on-the-right .wp-block-media-text__content::after {
+    right: -19px;
+    left: initial;
+  }
+  /*---LINE風にする---*/
+  .balloon-4536.line .wp-block-media-text__content {
+    border-radius: 20px;
+    background-color: #00da00;
+    border-color: transparent !important;
+  }
+  .balloon-4536.line .wp-block-media-text__content::before {
+    border-right-color: transparent;
+  }
+  .balloon-4536.line .wp-block-media-text__content::after {
+    border-right-color: #00da00;
+  }
+  .balloon-4536.line.has-media-on-the-right .wp-block-media-text__content::before {
+    border-left-color: transparent;
+  }
+  .balloon-4536.line.has-media-on-the-right .wp-block-media-text__content::after {
+    border-left-color: #00da00;
+  }
+  .balloon-4536.think.line .wp-block-media-text__content::before,.balloon-4536.think.line .wp-block-media-text__content::after {
+    background-color: #00da00; 
+    border-color: transparent !important;
+  }
+
+  /*---エディター反映用のCSS---*/
+  /*---吹き出し---*/
+  .wp-block-media-text.balloon-4536 {
+    grid-template-columns: 100px auto !important;
+  }
+  .wp-block-media-text.has-media-on-the-right.balloon-4536 {
+    grid-template-columns: auto 100px !important;
+  }
+  .balloon-4536.wp-block-media-text {
+    -webkit-box-align: initial;
+    -ms-flex-align: initial;
+    align-items: initial;
+  }
+  .wp-block-media-text .editor-media-container__resizer {
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+  }
+  .balloon-4536 figure {
+    vertical-align: top;
+  }
+  .balloon-4536 figure img {
+    border-radius: 50%;
+    border: 1px solid #ddd;
+  }
+  .balloon-4536 .editor-inner-blocks {
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    border: 1px solid #aaa;
+    padding: 4%;
+    position: relative;
+  }
+  .balloon-4536 .editor-inner-blocks p {
+    margin-bottom: 0;
+  }
+  .balloon-4536 .editor-inner-blocks::before,
+  .balloon-4536 .editor-inner-blocks::after {
+    position: absolute;
+    content: '';
+    border: 10px solid transparent;
+    top: 25px;
+  }
+  .balloon-4536 .editor-inner-blocks {
+    margin-left: 20px;
+  }
+  .balloon-4536 .editor-inner-blocks::before {
+    border-right: 10px solid #aaa;
+    left: -20px;
+  }
+  .balloon-4536 .editor-inner-blocks::after {
+    border-right: 10px solid #fff;
+    left: -19px;
+  }
+  .balloon-4536.has-media-on-the-right .editor-inner-blocks {
+    margin-right: 20px;
+    margin-left: 0;
+  }
+  .balloon-4536.has-media-on-the-right .editor-inner-blocks::before {
+    border-left: 10px solid #aaa;
+    border-right: none;
+    right: -20px;
+    left: 100%;
+  }
+  .balloon-4536.has-media-on-the-right .editor-inner-blocks::after {
+    border-left: 10px solid #fff;
+    border-right: none;
+    right: -19px;
+    left: calc(100% - 1px);
+  }
+  /*---考え事風---*/
+  .balloon-4536.think .editor-inner-blocks {
+    border-radius: 30px;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+  }
+  .balloon-4536.think .editor-inner-blocks::before,
+  .balloon-4536.think.has-media-on-the-right .editor-inner-blocks::before {
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    top: 15px;    
+  }
+  .balloon-4536.think .editor-inner-blocks::after,
+  .balloon-4536.think.has-media-on-the-right .editor-inner-blocks::after {
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    width: 4px;
+    height: 4px;
+    top: 20px;
+  }
+  .balloon-4536.think .editor-inner-blocks::before {
+    left: -12px;
+  }
+  .balloon-4536.think .editor-inner-blocks::after {
+    left: -19px;
+  }
+  .balloon-4536.think.has-media-on-the-right .editor-inner-blocks::before {
+    right: -12px;
+    left: initial;
+  }
+  .balloon-4536.think.has-media-on-the-right .editor-inner-blocks::after {
+    right: -19px;
+    left: initial;
+  }
+  /*---LINE風にする---*/
+  .balloon-4536.line .editor-inner-blocks {
+    border-radius: 20px;
+    background-color: #00da00;
+    border-color: transparent !important;
+  }
+  .balloon-4536.line .editor-inner-blocks::before {
+    border-right-color: transparent;
+  }
+  .balloon-4536.line .editor-inner-blocks::after {
+    border-right-color: #00da00;
+  }
+  .balloon-4536.line.has-media-on-the-right .editor-inner-blocks::before {
+    border-left-color: transparent;
+  }
+  .balloon-4536.line.has-media-on-the-right .editor-inner-blocks::after {
+    border-left-color: #00da00;
+  }
+  .balloon-4536.think.line .editor-inner-blocks::before,.balloon-4536.think.line .editor-inner-blocks::after {
+    background-color: #00da00; 
+    border-color: transparent !important;
+  }
+
+  /* ---------------------------------
+  youtube 
+  ---------------------------------**/
+
+  .wp-embed-aspect-16-9 {
+    text-align: center;
+  }
+
+  .wp-block-embed-youtube .wp-block-embed__wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    margin-top: 30px;
+}
+  .wp-block-embed-youtube .wp-block-embed__wrapper iframe {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100% !important;
+      height: 100% !important;
+  }
+
+    /*---------------------------------
+      pc sp 表示1
+    ---------------------------------*/
+    .pc {
+      display: block;
+    }
+  
+    .sp {
+      display: none;
+    }
+  
+  @media screen and (max-width: 600px) {
+    /*---------------------------------
+      pc sp 表示2
+    ---------------------------------*/
+    .pc {
+      display: none;
+    }
+  
+    .sp {
+      display: block;
+    }
+
+
+    /*---------------------------------
+      sp コンテンツ領域
+    ---------------------------------*/
+    /* body {
+      min-width: 0;
+    }
+
+    .inner {
+      width: auto;
+    } */
+    body {
+      min-width: 600px;
+    }
+    .inner {
+      width: 480px;
+      margin: 0 auto;
+    }
+    /*---------------------------------
+    sp Hero
+    ---------------------------------*/
+    .Hero__site-title {
+      width:auto;
+    }
+
+    .Hero__lead_pc {
+      width: auto;
+      display: block;
+    }
+
+    .flex-item-inner {
+      width: auto;
+    }
+    
+    .right .flex-item-inner {
+      width: auto;
+    }
+    
+    .Hero__lead_pc .left {
+      width: auto;
+    }
+    
+    .Hero__lead_pc .right {
+      width: auto;
+    }
+
+    .Nav__nav {
+      width: auto;
+    }
+
+    .HeaderPC__logo {
+      width: auto;
+    }
+
+    .HeaderPC__nav {
+      width: auto;
+    }
+
+    .Article__Box__inner {
+      width: auto;
+      margin: 0 auto;
+    }
+
+    .Article__Box .Box{
+      width: auto;
+    }
+
+    .Article__Box .inner {
+      width: auto;
+    }
+    
+    .Article__Box .Box__header {
+      width: auto;
+      }
+
+      .ServiceList__item {
+        width: auto;
+      }
+      
+      .ArchiveList__link {
+        width: auto;
+      }
+
+      .ArchiveList__thumbnail {
+        width: auto;
+      }
+
+      .Info__figure {
+        width: auto;
+      }
+      .Info__body {
+        width: auto;
+      }
+
+      .ServiceTable__table {
+      width: auto;
+      }
+
+      /*---------------------------------
+        sp Search & Filter Pro用
+      ---------------------------------*/
+      .searchandfilter > ul > li {
+        width: auto;
+        display: block;
+      }
+
+      .searchandfilter > ul > li > h4{
+        width: auto;
+      }
+
+      .searchandfilter .children {
+        width: auto;
+      }
+
+      .s_f_pro .Box__body {
+        width: auto;
+      }
+
+      .checked_list li:before {
+        /* width: 5px; */
+      }
+
+      textarea {
+        width: auto;
+      }
+
+       /* ボタンの位置 */
+      .pfollow{
+        display:block;
+        }
+
+      .pfollow2{
+        display:block;
+        /* ボタン全体の装飾 */
+      }
+
+      .psns{
+        width: auto;
+      }
+
+      .belle-box{
+        float:none;
+        }
+
+      .belle-img2{
+        float:none;
+      }
+
+      img {
+        width: auto;
+        max-width: 480px;
+      }
+
+
+      
   }

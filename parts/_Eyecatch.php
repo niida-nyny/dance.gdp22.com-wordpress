@@ -2,8 +2,10 @@
 * トップページ slickパーツ
 */
 ?>
-<div class="Eyecatch">
-  <div id="js-slick" class="Eyecatch__list">
+<div class="Eyecatch container">
+
+  <div id="js-slick" class="Eyecatch__list row mx-auto">
+
     <div class="Eyecatch__item">
       <a class="Eyecatch__link ArchiveList__link" href="<?php echo esc_url(home_url('/philosophy')); ?>">
         <img class="Eyecatch__img" src="<?php echo esc_url(get_theme_file_uri('/img/eyecatch01.jpg')); ?>">
@@ -56,10 +58,10 @@
   window.addEventListener('load', function() {
     jQuery(function($) {
       // ここにjQueryを使ったコードを記述
-      
+
       // メインスライダー設定
       $('#js-slick').slick({
-        asNavFor:'#js-slick-thumbnail',
+        asNavFor: '#js-slick-thumbnail',
         accessibility: true,
         autoplay: true,
         autoplaySpeed: 15000,
@@ -71,7 +73,7 @@
         slidesToShow: 1,
         easing: 'linear',
         infinite: true,
-        pauseOnFocus:true,
+        pauseOnFocus: true,
         pauseOnHover: true,
         pauseOnDotsHover: true,
         respondTo: 'window',
@@ -82,18 +84,17 @@
         variableWidth: true,
         zIndex: 1000,
         arrows: true,
-        prevArrow:'<div class="prev">＜</div>',
-        nextArrow:'<div class="next">＞</div>'
+        prevArrow: '<div class="prev">＜</div>',
+        nextArrow: '<div class="next">＞</div>'
       });
 
       // サムネイルスライダー設定
       $('#js-slick-thumbnail').slick({
-        asNavFor:'#js-slick',
+        asNavFor: '#js-slick',
         focusOnSelect: true,
         slidesToShow: 6,
         arrows: false,
       });
     });
   });
-
 </script>

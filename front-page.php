@@ -43,7 +43,7 @@ get_template_part('parts/_Eyecatch');
 <?php endif; ?>
 <?php /***** メインループ終了 *****/ ?>
 
-<main class="Main -frontpage">
+<main class="Main -frontpage container">
 <article class="Box">
     <div class="Box__inner inner">
 <?php  //echo do_shortcode( ' [events-calendar-search placeholder="Search Events" show-events="5" disable-past-events="false" layout="small"]' ); ?>

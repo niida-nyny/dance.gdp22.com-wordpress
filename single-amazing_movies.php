@@ -57,8 +57,9 @@
   <?php endif; ?>
   <?php /***** メインループ終了 *****/ ?>
 
+  <?php // ***** この記事を書いた人 ***** ?>
   <div class="author-box my-5">
-    <div class="author-name">
+    <div class="author-name bg-primary text-white">
       この記事を書いた人：<?php the_author_meta("display_name"); ?>
     </div>
     <div class="belle-box">
@@ -66,16 +67,15 @@
         <?php echo get_avatar(get_the_author_meta('ID'), 150); ?>
       </div>
       <div class="author-sns">
-        <ul class="pfollow">
+        <!-- <ul class="pfollow">
           <li><a class="ptwitter psns" href="<?php the_author_meta("twitter"); ?>" target="_blank"><i class="fab fa-twitter"></i></a>
           </li>
           <li><a class="pfb psns" href="<?php the_author_meta("facebook"); ?>" target="_blank"><i class="fab fa-facebook-f"></i></a>
           </li>
-        </ul>
+        </ul> -->
       </div>
     </div>
     <div class="belle-info">
-      <?php //nl2br(the_author_meta("description")); ?>
       <?php echo wpautop(get_the_author_meta('user_description' , get_the_author_meta('ID'))); ?>
     </div>
     <div class="clearfix"></div>
