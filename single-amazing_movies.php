@@ -60,7 +60,7 @@
   <?php // ***** この記事を書いた人 ***** ?>
   <div class="author-box my-5">
     <div class="author-name bg-primary text-white">
-      この記事を書いた人：<?php the_author_meta("display_name"); ?>
+      この記事を書いた人：<?php the_author_meta("nickname"); ?>
     </div>
     <div class="belle-box">
       <div class="belle-img">

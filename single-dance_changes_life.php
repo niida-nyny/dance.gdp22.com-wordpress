@@ -7,7 +7,7 @@
 get_header();
 ?>
 
-<main class="Main -single container">
+<main class="Main -single container px-0">
   <?php /***** メインループ開始 *****/ ?>
   <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
