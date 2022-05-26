@@ -66,7 +66,7 @@ function v($val)
 // },999);
 
 function custom_excerpt_length( $length ) {
-  return 20;	
+  return 100;	
 }	
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
@@ -640,3 +640,15 @@ add_filter( 'wp_lazy_loading_enabled' , '__return_false' );
  * プロフィールに改行を追加
  */
 remove_filter('pre_user_description', 'wp_filter_kses');
+
+
+/**
+ * 管理画面にタグ一覧を表示しチェックボックス選択式にする
+ */
+function re_register_post_tag_taxonomy() {
+  $tag_slug_args = get_taxonomy('post_tag');
+  $tag_slug_args->hierarchical = true;
+  $tag_slug_args->meta_box_cb = 'post_categories_meta_box';
+  register_taxonomy('post_tag', 'post', (array) $tag_slug_args);
+}
+add_action( 'init', 're_register_post_tag_taxonomy', 1 );

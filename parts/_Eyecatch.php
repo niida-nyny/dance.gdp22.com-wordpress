@@ -13,7 +13,7 @@
     </div>
 
     <div class="Eyecatch__item">
-      <a class="Eyecatch__link ArchiveList__link" href="<?php echo esc_url(home_url('/archives/dance_changes_life/kohin')); ?>">
+      <a class="Eyecatch__link ArchiveList__link" href="<?php echo esc_url(home_url('/archives/dance_changes_life/')); ?>">
         <img class="Eyecatch__img img-fluid" src="<?php echo esc_url(get_theme_file_uri('/img/eyecatch02.jpg')); ?>">
       </a>
     </div>
@@ -71,7 +71,7 @@
         dots: true,
         draggable: true,
         focusOnSelect: true,
-        slidesToShow: 1,
+        slidesToShow: 3,
         easing: 'linear',
         infinite: true,
         pauseOnFocus: true,

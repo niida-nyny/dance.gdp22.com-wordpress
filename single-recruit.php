@@ -14,7 +14,7 @@
 
               <?php
               set_query_var('taxonomySlug', 'recruit');
-              set_query_var('displayLink', true);
+              set_query_var('displayLink', false);
               set_query_var('displayCount', true);
               set_query_var('unitName', '件');
               get_template_part('parts/_TaxonomyList');

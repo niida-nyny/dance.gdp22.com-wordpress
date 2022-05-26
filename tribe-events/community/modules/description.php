@@ -33,6 +33,9 @@ $events_label_singular = tribe_get_event_label_singular();
 	// tribe_community_events_field_label( 'post_content', sprintf( __( '%s Description:', 'tribe-events-community' ), $events_label_singular ) ); ?>
 	<label for="post_content" class="">レッスン・イベント 詳細 (Lesson &amp; Event Description): <span class="req">(必須)</span></label>
 	<p>ここに入力された内容が検索候補となります</p>
+	<p>オプションとして、インストラクターなどの表記を英語、漢字、読み仮名（カタカナ、ひらがな）があると検索もれが少ないです</p>
+	<p>例）直美(Naomi,なおみ、ナオミ)など</p>
+
 	<?php tribe_community_events_form_content(); ?>
 
 	<?php

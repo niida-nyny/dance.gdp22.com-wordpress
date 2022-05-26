@@ -15,7 +15,7 @@
                     <?php endif; ?>
 
                     <div class="ArchiveList__meta">
-                      <h2 class="ArchiveList__title"><?php the_title(); ?></h2>
+                      <h2 class="ArchiveList__title"><?php the_title(); ?>さん</h2>
                       <div class="ArchiveList__text">
                         <?php 
                         the_excerpt(); 
