@@ -289,7 +289,8 @@ body {
 }
 
 .inner {
-  width: 940px;
+  width: 100%;
+  /* width: 940px; */
   margin: 0 auto;
 }
 
@@ -740,7 +741,7 @@ ul li:hover ul{
   flex-wrap: wrap; */
 }
 .ArchiveList__item {
-  margin-bottom: 0;
+  margin-bottom: 20px;
 }
 
 .ArchiveList__item-mb {
@@ -772,16 +773,28 @@ ul li:hover ul{
   font-size: 1.2em;
   font-weight: bold;
   margin: 0 0 0;
+  line-height: 1.5em;
+  
 }
 .ArchiveList__text {
   font-size: 18px;
 }
+
 .ArchiveList__bottom {
   /* position: absolute; */
-  bottom: 0;
-  left: 20px;
-  display: flex;
+  /* bottom: 0;
+  left: 20px; */
+  /* display: flex; */
+  display: inline-flex;
+  align-items: center;
+  padding-left: 20px;
 }
+
+.ArchiveList__bottom .fa-tags {
+  margin-right: 10px;
+  color:#6c757d;;
+}
+
 .ArchiveList__date {
   font-size: 0.8em;
   padding: 2px 0;
@@ -1966,6 +1979,46 @@ body ul.wpuf-form li .wpuf-fields ul.wpuf-category-checklist {
       height: 100% !important;
   }
 
+    /* ---------------------------------
+    フロントページ 最新情報
+    ---------------------------------**/
+    /* 共通 */
+    .ArchiveList__meta span {
+      padding: 5px 10px;
+      border-radius: 15px;
+      margin: 5px 10px 10px 0;
+      color: #ffffff;
+      font-size: 80%;
+    }
+    
+    /* 感動ダンス */
+    .ArchiveList__meta .amazing-movie {
+      background-color: #e83e8c;
+    }
+
+    /* ダンスをやったら人生変わった */
+    .ArchiveList__meta .dance-change-life {
+      background-color: #ffc107;
+      color: #000;
+    }
+
+    /* レッスン */
+
+    .ArchiveList__meta .lesson {
+      background-color: #007bff;
+    }
+
+    /* イベント */
+    .ArchiveList__meta .event {
+      background-color: #dc3545;
+    }
+
+    /* 会場情報 */
+    .ArchiveList__meta .venue {
+      background-color: #d7e7b1;
+      color: #000;
+    }
+
     /*---------------------------------
       pc sp 表示1
     ---------------------------------*/
@@ -2011,7 +2064,7 @@ body ul.wpuf-form li .wpuf-fields ul.wpuf-category-checklist {
       width: auto;
     }
     .inner {
-      min-width: 580px;
+      /* min-width: 580px; */
       /* width: auto; */
       margin: 0 auto;
       padding: 0 15px;
@@ -2363,7 +2416,7 @@ body ul.wpuf-form li .wpuf-fields ul.wpuf-category-checklist {
       .Footer {
         display: block;
         width: 100%;
-        min-width: 600px;
+        /* min-width: 600px; */
         margin: 0 auto;
       }
 

@@ -38,16 +38,6 @@ get_header();
               </div>
             </div>
 			*/ ?>
-            <?php
-            if (has_post_thumbnail()) : ?>
-              <figure class="Single__figure">
-                <?php
-                the_post_thumbnail('img_960_50');
-                ?>
-              <?php else : ?>
-                <?php /*<img class="Single__eyecatch" src="<?php echo esc_attr(get_theme_file_uri('/img/eyecatch.jpg')); ?>" alt="アイキャッチ">*/ ?>
-              </figure>
-            <?php endif; ?>
           </header>
           <div class="Single__body Single__body-interview">
             <?php the_content(); ?>

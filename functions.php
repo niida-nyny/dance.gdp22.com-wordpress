@@ -652,3 +652,369 @@ function re_register_post_tag_taxonomy() {
   register_taxonomy('post_tag', 'post', (array) $tag_slug_args);
 }
 add_action( 'init', 're_register_post_tag_taxonomy', 1 );
+
+
+// ボタン（赤）
+function btnRed( $atts, $content = null ) {
+  extract( shortcode_atts( array(
+    'class' => '',
+  ), $atts ) );
+
+  return '<div class="btn-red aligncenter ' . $class. '">' . $content . '</div>';
+}
+add_shortcode('btn-red','btnRed');
+
+// 2023/05/09テスト　カスタムクエリ　イベントカレンダー
+function custom_calendar_query($start_date, $end_date){
+  $args = array(
+    'post_type' => 'event',
+    'meta_query' => array(
+      'relation' => 'AND',
+      array(
+        'key' => 'event_date',
+        'value' => $start_date,
+        'compare' => '>='
+      ),
+      array(
+        'key' => 'event_date',
+        'value' => $end_date,
+        'compare' => '<='
+      )
+    ),
+    'orderby' => 'meta_value',
+    'order' => 'ASC'
+  );
+  $query = new WP_Query($args);
+  return $query;
+}
+
+
+
+
+
+
+
+
+// ACFの大エリア-01-北海道エリアを表示
+function get_venues_with_area_large_hokkaido() {
+  $args = array(
+    'post_type'      => 'tribe_venue',
+    'posts_per_page' => -1,
+    'meta_query'     => array(
+      array(
+        'key'      => 'area_large',
+        'value'    => '01',//ここを変更
+        'compare'  => '='
+      )
+    )
+  );
+
+  $query = new WP_Query($args);
+  $venues = array();
+
+  if ($query->have_posts()) {
+    while ($query->have_posts()) {
+      $query->the_post();
+      $venue_id = get_the_ID();
+      $venue_name = get_the_title();
+      $venues[$venue_id] = $venue_name;
+    }
+  }
+  wp_reset_postdata();
+
+  return $venues;
+}
+
+
+// ACFの大エリア-02-東北エリアを表示
+function get_venues_with_area_large_tohoku() {
+  $args = array(
+    'post_type'      => 'tribe_venue',
+    'posts_per_page' => -1,
+    'meta_query'     => array(
+      array(
+        'key'      => 'area_large',
+        'value'    => '02',//ここを変更
+        'compare'  => '='
+      )
+    )
+  );
+
+  $query = new WP_Query($args);
+  $venues = array();
+
+  if ($query->have_posts()) {
+    while ($query->have_posts()) {
+      $query->the_post();
+      $venue_id = get_the_ID();
+      $venue_name = get_the_title();
+      $venues[$venue_id] = $venue_name;
+    }
+  }
+  wp_reset_postdata();
+
+  return $venues;
+}
+
+
+// ACFの大エリア-03-関東エリアを表示
+function get_venues_with_area_large_kanto() {
+  $args = array(
+    'post_type'      => 'tribe_venue',
+    'posts_per_page' => -1,
+    'meta_query'     => array(
+      array(
+        'key'      => 'area_large',
+        'value'    => '03',//ここを変更
+        'compare'  => '='
+      )
+    )
+  );
+
+  $query = new WP_Query($args);
+  $venues = array();
+
+  if ($query->have_posts()) {
+    while ($query->have_posts()) {
+      $query->the_post();
+      $venue_id = get_the_ID();
+      $venue_name = get_the_title();
+      $venues[$venue_id] = $venue_name;
+    }
+  }
+  wp_reset_postdata();
+
+  return $venues;
+}
+
+// 関東エリア2
+function filter_events_by_area_large($query) {
+  if ( ! is_admin() && $query->is_main_query() && is_post_type_archive('tribe_events') ) {
+    $query->set('meta_key', 'area_large');
+    $query->set('meta_value', '03'); // 関東エリアの値に合わせて変更
+    $query->set('meta_compare', '=');
+  }
+}
+add_action('pre_get_posts', 'filter_events_by_area_large');
+
+
+
+// ACFの大エリア-04-中部エリアを表示
+function get_venues_with_area_large_chubu() {
+  $args = array(
+    'post_type'      => 'tribe_venue',
+    'posts_per_page' => -1,
+    'meta_query'     => array(
+      array(
+        'key'      => 'area_large',
+        'value'    => '04',//ここを変更
+        'compare'  => '='
+      )
+    )
+  );
+
+  $query = new WP_Query($args);
+  $venues = array();
+
+  if ($query->have_posts()) {
+    while ($query->have_posts()) {
+      $query->the_post();
+      $venue_id = get_the_ID();
+      $venue_name = get_the_title();
+      $venues[$venue_id] = $venue_name;
+    }
+  }
+  wp_reset_postdata();
+
+  return $venues;
+}
+
+
+// ACFの大エリア-05-近畿エリアを表示
+function get_venues_with_area_large_kinki() {
+  $args = array(
+    'post_type'      => 'tribe_venue',
+    'posts_per_page' => -1,
+    'meta_query'     => array(
+      array(
+        'key'      => 'area_large',
+        'value'    => '05',//ここを変更
+        'compare'  => '='
+      )
+    )
+  );
+
+  $query = new WP_Query($args);
+  $venues = array();
+
+  if ($query->have_posts()) {
+    while ($query->have_posts()) {
+      $query->the_post();
+      $venue_id = get_the_ID();
+      $venue_name = get_the_title();
+      $venues[$venue_id] = $venue_name;
+    }
+  }
+  wp_reset_postdata();
+
+  return $venues;
+}
+
+
+// ACFの大エリア-06-中国エリアを表示
+function get_venues_with_area_large_chugoku() {
+  $args = array(
+    'post_type'      => 'tribe_venue',
+    'posts_per_page' => -1,
+    'meta_query'     => array(
+      array(
+        'key'      => 'area_large',
+        'value'    => '06',//ここを変更
+        'compare'  => '='
+      )
+    )
+  );
+
+  $query = new WP_Query($args);
+  $venues = array();
+
+  if ($query->have_posts()) {
+    while ($query->have_posts()) {
+      $query->the_post();
+      $venue_id = get_the_ID();
+      $venue_name = get_the_title();
+      $venues[$venue_id] = $venue_name;
+    }
+  }
+  wp_reset_postdata();
+
+  return $venues;
+}
+
+
+// ACFの大エリア-07-四国エリアを表示
+function get_venues_with_area_large_shikoku() {
+  $args = array(
+    'post_type'      => 'tribe_venue',
+    'posts_per_page' => -1,
+    'meta_query'     => array(
+      array(
+        'key'      => 'area_large',
+        'value'    => '07',//ここを変更
+        'compare'  => '='
+      )
+    )
+  );
+
+  $query = new WP_Query($args);
+  $venues = array();
+
+  if ($query->have_posts()) {
+    while ($query->have_posts()) {
+      $query->the_post();
+      $venue_id = get_the_ID();
+      $venue_name = get_the_title();
+      $venues[$venue_id] = $venue_name;
+    }
+  }
+  wp_reset_postdata();
+
+  return $venues;
+}
+
+
+// ACFの大エリア-08-九州エリアを表示
+function get_venues_with_area_large_kyusyu() {
+  $args = array(
+    'post_type'      => 'tribe_venue',
+    'posts_per_page' => -1,
+    'meta_query'     => array(
+      array(
+        'key'      => 'area_large',
+        'value'    => '08',//ここを変更
+        'compare'  => '='
+      )
+    )
+  );
+
+  $query = new WP_Query($args);
+  $venues = array();
+
+  if ($query->have_posts()) {
+    while ($query->have_posts()) {
+      $query->the_post();
+      $venue_id = get_the_ID();
+      $venue_name = get_the_title();
+      $venues[$venue_id] = $venue_name;
+    }
+  }
+  wp_reset_postdata();
+
+  return $venues;
+}
+
+
+// ACFの大エリア-09-沖縄エリアを表示
+function get_venues_with_area_large_okinawa() {
+  $args = array(
+    'post_type'      => 'tribe_venue',
+    'posts_per_page' => -1,
+    'meta_query'     => array(
+      array(
+        'key'      => 'area_large',
+        'value'    => '09',//ここを変更
+        'compare'  => '='
+      )
+    )
+  );
+
+  $query = new WP_Query($args);
+  $venues = array();
+
+  if ($query->have_posts()) {
+    while ($query->have_posts()) {
+      $query->the_post();
+      $venue_id = get_the_ID();
+      $venue_name = get_the_title();
+      $venues[$venue_id] = $venue_name;
+    }
+  }
+  wp_reset_postdata();
+
+  return $venues;
+}
+
+
+
+
+// ★★★★★★★ 中エリア ★★★★★★★ 
+
+// ACFの中エリア-03-東京エリアを表示
+function get_venues_with_area_middle_tokyo() {
+  $args = array(
+    'post_type'      => 'tribe_venue',
+    'posts_per_page' => -1,
+    'meta_query'     => array(
+      array(
+        'key'      => 'area_middle_03_kanto',
+        'value'    => '01',//ここを変更
+        'compare'  => '='
+      )
+    )
+  );
+
+  $query = new WP_Query($args);
+  $venues = array();
+
+  if ($query->have_posts()) {
+    while ($query->have_posts()) {
+      $query->the_post();
+      $venue_id = get_the_ID();
+      $venue_name = get_the_title();
+      $venues[$venue_id] = $venue_name;
+    }
+  }
+  wp_reset_postdata();
+
+  return $venues;
+}

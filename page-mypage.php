@@ -17,7 +17,7 @@ get_header();
           </header>
           <div class="Single__body">
             <?php 
-                echo 'マイページを見るにはログインしてください';
+                echo 'マイページを見るにはログインしてください。<br><span>ログインするためには、一度で入れない仕様のため、2度ログイン操作が必要です。</span>';
                 echo do_shortcode( '  [wpuf-login]' ); 
             ?>
           </div>
