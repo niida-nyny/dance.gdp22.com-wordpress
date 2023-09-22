@@ -987,7 +987,7 @@ function get_venues_with_area_large_okinawa() {
 
 
 
-// ★★★★★★★ 中エリア ★★★★★★★ 
+// ★★★★★★★ 中エリア 小エリア★★★★★★★ 
 
 // ACFの中エリア-03-東京エリアを表示
 function get_venues_with_area_middle_tokyo() {
@@ -1018,3 +1018,253 @@ function get_venues_with_area_middle_tokyo() {
 
   return $venues;
 }
+
+// テストまとめて出力できるか
+function get_venues_by_area_small($area_small_value) {
+  $args = array(
+    'post_type'      => 'tribe_venue',
+    'posts_per_page' => -1,
+    'meta_query'     => array(
+      array(
+        'key'      => 'area_small_03_01',
+        'value'    => $area_small_value,
+        'compare'  => '='
+      )
+    )
+  );
+
+  $query = new WP_Query($args);
+  $venues = array();
+
+  if ($query->have_posts()) {
+    while ($query->have_posts()) {
+      $query->the_post();
+      $venue_id = get_the_ID();
+      $venue_name = get_the_title();
+      $venues[$venue_id] = $venue_name;
+    }
+  }
+  wp_reset_postdata();
+
+  return $venues;
+}
+
+// 使用例
+// $area_small_01_venues = get_venues_by_area_small('01');
+// $area_small_02_venues = get_venues_by_area_small('02');
+
+// ACFの中エリア-03-東京エリア-01 : 銀座・新橋・有楽町
+function get_venues_with_area_small_01() {//ここを変更
+  $args = array(
+    'post_type'      => 'tribe_venue',
+    'posts_per_page' => -1,
+    'meta_query'     => array(
+      array(
+        'key'      => 'area_small_03_01',
+        'value'    => '01',//ここを変更
+        'compare'  => '='
+      )
+    )
+  );
+
+  $query = new WP_Query($args);
+  $venues = array();
+
+  if ($query->have_posts()) {
+    while ($query->have_posts()) {
+      $query->the_post();
+      $venue_id = get_the_ID();
+      $venue_name = get_the_title();
+      $venues[$venue_id] = $venue_name;
+    }
+  }
+  wp_reset_postdata();
+
+  return $venues;
+}
+
+// ACFの中エリア-03-東京エリア-02 : 東京・日本橋
+function get_venues_with_area_small_02() {//ここを変更
+  $args = array(
+    'post_type'      => 'tribe_venue',
+    'posts_per_page' => -1,
+    'meta_query'     => array(
+      array(
+        'key'      => 'area_small_03_01',
+        'value'    => '02',//ここを変更
+        'compare'  => '='
+      )
+    )
+  );
+
+  $query = new WP_Query($args);
+  $venues = array();
+
+  if ($query->have_posts()) {
+    while ($query->have_posts()) {
+      $query->the_post();
+      $venue_id = get_the_ID();
+      $venue_name = get_the_title();
+      $venues[$venue_id] = $venue_name;
+    }
+  }
+  wp_reset_postdata();
+
+  return $venues;
+}
+
+// ACFの中エリア-03-東京エリア-03 : 渋谷・恵比寿・代官山
+function get_venues_with_area_small_03() {//ここを変更
+  $args = array(
+    'post_type'      => 'tribe_venue',
+    'posts_per_page' => -1,
+    'meta_query'     => array(
+      array(
+        'key'      => 'area_small_03_01',
+        'value'    => '03',//ここを変更
+        'compare'  => '='
+      )
+    )
+  );
+
+  $query = new WP_Query($args);
+  $venues = array();
+
+  if ($query->have_posts()) {
+    while ($query->have_posts()) {
+      $query->the_post();
+      $venue_id = get_the_ID();
+      $venue_name = get_the_title();
+      $venues[$venue_id] = $venue_name;
+    }
+  }
+  wp_reset_postdata();
+
+  return $venues;
+}
+
+// ACFの中エリア-03-東京エリア-04 : 新宿・代々木・大久保
+function get_venues_with_area_small_04() {//ここを変更
+  $args = array(
+    'post_type'      => 'tribe_venue',
+    'posts_per_page' => -1,
+    'meta_query'     => array(
+      array(
+        'key'      => 'area_small_03_01',
+        'value'    => '04',//ここを変更
+        'compare'  => '='
+      )
+    )
+  );
+
+  $query = new WP_Query($args);
+  $venues = array();
+
+  if ($query->have_posts()) {
+    while ($query->have_posts()) {
+      $query->the_post();
+      $venue_id = get_the_ID();
+      $venue_name = get_the_title();
+      $venues[$venue_id] = $venue_name;
+    }
+  }
+  wp_reset_postdata();
+
+  return $venues;
+}
+
+// ACFの中エリア-03-東京エリア-05 : 池袋～高田馬場・早稲田
+function get_venues_with_area_small_05() {//ここを変更
+  $args = array(
+    'post_type'      => 'tribe_venue',
+    'posts_per_page' => -1,
+    'meta_query'     => array(
+      array(
+        'key'      => 'area_small_03_01',
+        'value'    => '05',//ここを変更
+        'compare'  => '='
+      )
+    )
+  );
+
+  $query = new WP_Query($args);
+  $venues = array();
+
+  if ($query->have_posts()) {
+    while ($query->have_posts()) {
+      $query->the_post();
+      $venue_id = get_the_ID();
+      $venue_name = get_the_title();
+      $venues[$venue_id] = $venue_name;
+    }
+  }
+  wp_reset_postdata();
+
+  return $venues;
+}
+
+// ACFの中エリア-03-東京エリア-06 : 原宿・表参道・青山
+function get_venues_with_area_small_06() {//ここを変更
+  $args = array(
+    'post_type'      => 'tribe_venue',
+    'posts_per_page' => -1,
+    'meta_query'     => array(
+      array(
+        'key'      => 'area_small_03_01',
+        'value'    => '06',//ここを変更
+        'compare'  => '='
+      )
+    )
+  );
+
+  $query = new WP_Query($args);
+  $venues = array();
+
+  if ($query->have_posts()) {
+    while ($query->have_posts()) {
+      $query->the_post();
+      $venue_id = get_the_ID();
+      $venue_name = get_the_title();
+      $venues[$venue_id] = $venue_name;
+    }
+  }
+  wp_reset_postdata();
+
+  return $venues;
+}
+
+// ACFの中エリア-03-東京エリア-07 : 六本木・麻布・広尾
+function get_venues_with_area_small_07() {//ここを変更
+  $args = array(
+    'post_type'      => 'tribe_venue',
+    'posts_per_page' => -1,
+    'meta_query'     => array(
+      array(
+        'key'      => 'area_small_03_01',
+        'value'    => '07',//ここを変更
+        'compare'  => '='
+      )
+    )
+  );
+
+  $query = new WP_Query($args);
+  $venues = array();
+
+  if ($query->have_posts()) {
+    while ($query->have_posts()) {
+      $query->the_post();
+      $venue_id = get_the_ID();
+      $venue_name = get_the_title();
+      $venues[$venue_id] = $venue_name;
+    }
+  }
+  wp_reset_postdata();
+
+  return $venues;
+}
+
+
+
+
+
+

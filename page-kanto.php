@@ -38,7 +38,33 @@ get_header();
 // }
 
 // 03-関東エリア
-$venues = get_venues_with_area_large_kanto();
+// $venues = get_venues_with_area_large_kanto();
+// if ($venues) {
+//   echo '<ul>';
+//   foreach ($venues as $venue_id => $venue_name) {
+//     echo '<li><a href="' . get_permalink($venue_id) . '">' . $venue_name . '</a></li>';
+//   }
+//   echo '</ul>';
+// } else {
+//   echo '関東エリアに該当する会場はありません。';
+// }
+
+// 東京エリア
+// echo '<h3>東京</h3>';
+// $venues = get_venues_with_area_middle_tokyo();
+// if ($venues) {
+//   echo '<ul>';
+//   foreach ($venues as $venue_id => $venue_name) {
+//     echo '<li><a href="' . get_permalink($venue_id) . '">' . $venue_name . '</a></li>';
+//   }
+//   echo '</ul>';
+// } else {
+//   echo '東京エリアに該当する会場はありません。';
+// }
+
+// 01 : 銀座・新橋・有楽町
+echo '<h3>銀座・新橋・有楽町</h3>';
+$venues = get_venues_with_area_small_01();//ここを変更
 if ($venues) {
   echo '<ul>';
   foreach ($venues as $venue_id => $venue_name) {
@@ -46,8 +72,178 @@ if ($venues) {
   }
   echo '</ul>';
 } else {
-  echo '関東エリアに該当する会場はありません。';
+  echo '銀座・新橋・有楽町エリアに該当する会場はありません。';//ここを変更
 }
+
+// 02 : 東京・日本橋
+echo '<h3>東京・日本橋</h3>';
+$venues = get_venues_with_area_small_02();//ここを変更
+if ($venues) {
+  echo '<ul>';
+  foreach ($venues as $venue_id => $venue_name) {
+    echo '<li><a href="' . get_permalink($venue_id) . '">' . $venue_name . '</a></li>';
+  }
+  echo '</ul>';
+} else {
+  echo '東京・日本橋エリアに該当する会場はありません。';//ここを変更
+}
+
+// 03 : 渋谷・恵比寿・代官山
+echo '<h3>渋谷・恵比寿・代官山</h3>';
+$venues = get_venues_with_area_small_03();//ここを変更
+if ($venues) {
+  echo '<ul>';
+  foreach ($venues as $venue_id => $venue_name) {
+    echo '<li><a href="' . get_permalink($venue_id) . '">' . $venue_name . '</a></li>';
+  }
+  echo '</ul>';
+} else {
+  echo '渋谷・恵比寿・代官山エリアに該当する会場はありません。';//ここを変更
+}
+
+// 04 : 新宿・代々木・大久保
+echo '<h3>新宿・代々木・大久保</h3>';
+$venues = get_venues_with_area_small_04();//ここを変更
+if ($venues) {
+  echo '<ul>';
+  foreach ($venues as $venue_id => $venue_name) {
+    echo '<li><a href="' . get_permalink($venue_id) . '">' . $venue_name . '</a></li>';
+  }
+  echo '</ul>';
+} else {
+  echo '新宿・代々木・大久保エリアに該当する会場はありません。';//ここを変更
+}
+
+// 05 : 池袋～高田馬場・早稲田
+echo '<h3>池袋～高田馬場・早稲田</h3>';
+$venues = get_venues_with_area_small_05();//ここを変更
+if ($venues) {
+  echo '<ul>';
+  foreach ($venues as $venue_id => $venue_name) {
+    echo '<li><a href="' . get_permalink($venue_id) . '">' . $venue_name . '</a></li>';
+  }
+  echo '</ul>';
+} else {
+  echo '池袋～高田馬場・早稲田エリアに該当する会場はありません。';//ここを変更
+}
+
+// 06 : 原宿・表参道・青山
+echo '<h3>原宿・表参道・青山</h3>';
+$venues = get_venues_with_area_small_06();//ここを変更
+if ($venues) {
+  echo '<ul>';
+  foreach ($venues as $venue_id => $venue_name) {
+    echo '<li><a href="' . get_permalink($venue_id) . '">' . $venue_name . '</a></li>';
+  }
+  echo '</ul>';
+} else {
+  echo '原宿・表参道・青山エリアに該当する会場はありません。';//ここを変更
+}
+
+// 07:六本木・麻布・広尾
+echo '<h3>六本木・麻布・広尾</h3>';
+$venues = get_venues_with_area_small_07();
+if ($venues) {
+  echo '<ul>';
+  foreach ($venues as $venue_id => $venue_name) {
+    echo '<li><a href="' . get_permalink($venue_id) . '">' . $venue_name . '</a></li>';
+  }
+  echo '</ul>';
+} else {
+  echo '六本木・麻布・広尾エリアに該当する会場はありません。';//ここを変更
+}
+
+
+// 07:テスト
+
+echo '<h3>テスト</h3>';
+$area_small_01_venues = get_venues_by_area_small('01');
+$venues = $area_small_01_venues;
+if ($venues) {
+  echo '<ul>';
+  foreach ($venues as $venue_id => $venue_name) {
+    echo '<li><a href="' . get_permalink($venue_id) . '">' . $venue_name . '</a></li>';
+  }
+  echo '</ul>';
+} else {
+  echo 'テストエリアに該当する会場はありません。';
+}
+
+
+// テスト2
+echo '<h3>テスト2</h3>';
+
+$number_of_choices = 31; // 選択肢の総数を設定
+
+for ($i = 1; $i <= $number_of_choices; $i++) {
+    $area_value = str_pad($i, 2, '0', STR_PAD_LEFT); // 選択肢を2桁の値にフォーマット
+    $venues = get_venues_by_area_small($area_value);
+
+    if ($venues) {
+        echo '<h4>エリア-' . $area_value . '</h4>';
+        echo '<ul>';
+        foreach ($venues as $venue_id => $venue_name) {
+            echo '<li><a href="' . get_permalink($venue_id) . '">' . $venue_name . '</a></li>';
+        }
+        echo '</ul>';
+    } else {
+        echo '<p>エリア-' . $area_value . 'に該当する会場はありません。</p>';
+    }
+}
+
+// テスト3
+echo '<h3>テスト3</h3>';
+
+// 選択肢の連想配列を定義
+$choices = array(
+    '01' => '銀座・新橋・有楽町',
+    '02' => '東京・日本橋',
+    '03' => '渋谷・恵比寿・代官山',
+    '04' => '新宿・代々木・大久保',
+    '05' => '池袋～高田馬場・早稲田',
+    '06' => '原宿・表参道・青山',
+    '07' => '六本木・麻布・広尾',
+    '08' => '赤坂・永田町・溜池',
+    '09' => '四ツ谷・市ヶ谷・飯田橋',
+    '10' => '秋葉原・神田・水道橋',
+    '11' => '上野・浅草・日暮里',
+    '12' => '浜松町・田町・品川',
+    '13' => '目黒・白金・五反田',
+    '14' => '大塚・巣鴨・駒込・赤羽',
+    '15' => '両国・錦糸町・小岩',
+    '16' => '築地・湾岸・お台場',
+    '17' => '大井・蒲田',
+    '18' => '東急沿線',
+    '19' => '京王・小田急沿線',
+    '20' => '中野～西荻窪',
+    '21' => '西武沿線',
+    '22' => '板橋・東武沿線',
+    '23' => '千住・綾瀬・葛飾',
+    '24' => '吉祥寺・三鷹・武蔵境',
+    '25' => '小金井・国分寺・国立',
+    '26' => '調布・府中・狛江',
+    '27' => '町田・稲城・多摩',
+    '28' => '西東京市周辺',
+    '29' => '立川市・八王子市周辺',
+    '30' => '福生・青梅周辺',
+    '31' => '伊豆諸島・小笠原',
+);
+
+foreach ($choices as $area_value => $area_name) {
+    $venues = get_venues_by_area_small($area_value);
+
+    if ($venues) {
+        echo '<h4>' . $area_name . '</h4>';
+        echo '<ul>';
+        foreach ($venues as $venue_id => $venue_name) {
+            echo '<li><a href="' . get_permalink($venue_id) . '">' . $venue_name . '</a></li>';
+        }
+        echo '</ul>';
+    } else {
+        echo '<p>' . $area_name . 'に該当する会場はありません。</p>';
+    }
+}
+
 
 // 04-中部エリア
 // $venues = get_venues_with_area_large_chubu();

@@ -64,11 +64,16 @@
 // <div class="author-box my-5">
 //   <div class="author-name bg-primary text-white">
 
-    // この記事を書いた人：<?php the_author_meta("nickname"); ?>
-    // </div>
+    // この記事を書いた人：<?php // the_author_meta("nickname"); ?>
+   <?php 
+   // </div>
     // <div class="belle-box">
-    // <div class="belle-img">
-    // <?php // echo get_avatar(get_the_author_meta('ID'), 150); ?>
+    // <div class="belle-img">  
+    ?>
+
+
+    <?php // echo get_avatar(get_the_author_meta('ID'), 150); ?>
+    
     // </div>
     // <div class="author-sns">
     // <!-- <ul class="pfollow">
