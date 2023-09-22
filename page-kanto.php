@@ -63,133 +63,95 @@ get_header();
 // }
 
 // 01 : 銀座・新橋・有楽町
-echo '<h3>銀座・新橋・有楽町</h3>';
-$venues = get_venues_with_area_small_01();//ここを変更
-if ($venues) {
-  echo '<ul>';
-  foreach ($venues as $venue_id => $venue_name) {
-    echo '<li><a href="' . get_permalink($venue_id) . '">' . $venue_name . '</a></li>';
-  }
-  echo '</ul>';
-} else {
-  echo '銀座・新橋・有楽町エリアに該当する会場はありません。';//ここを変更
-}
+// echo '<h3>銀座・新橋・有楽町</h3>';
+// $venues = get_venues_with_area_small_01();//ここを変更
+// if ($venues) {
+//   echo '<ul>';
+//   foreach ($venues as $venue_id => $venue_name) {
+//     echo '<li><a href="' . get_permalink($venue_id) . '">' . $venue_name . '</a></li>';
+//   }
+//   echo '</ul>';
+// } else {
+//   echo '銀座・新橋・有楽町エリアに該当する会場はありません。';//ここを変更
+// }
 
 // 02 : 東京・日本橋
-echo '<h3>東京・日本橋</h3>';
-$venues = get_venues_with_area_small_02();//ここを変更
-if ($venues) {
-  echo '<ul>';
-  foreach ($venues as $venue_id => $venue_name) {
-    echo '<li><a href="' . get_permalink($venue_id) . '">' . $venue_name . '</a></li>';
-  }
-  echo '</ul>';
-} else {
-  echo '東京・日本橋エリアに該当する会場はありません。';//ここを変更
-}
+// echo '<h3>東京・日本橋</h3>';
+// $venues = get_venues_with_area_small_02();//ここを変更
+// if ($venues) {
+//   echo '<ul>';
+//   foreach ($venues as $venue_id => $venue_name) {
+//     echo '<li><a href="' . get_permalink($venue_id) . '">' . $venue_name . '</a></li>';
+//   }
+//   echo '</ul>';
+// } else {
+//   echo '東京・日本橋エリアに該当する会場はありません。';//ここを変更
+// }
 
 // 03 : 渋谷・恵比寿・代官山
-echo '<h3>渋谷・恵比寿・代官山</h3>';
-$venues = get_venues_with_area_small_03();//ここを変更
-if ($venues) {
-  echo '<ul>';
-  foreach ($venues as $venue_id => $venue_name) {
-    echo '<li><a href="' . get_permalink($venue_id) . '">' . $venue_name . '</a></li>';
-  }
-  echo '</ul>';
-} else {
-  echo '渋谷・恵比寿・代官山エリアに該当する会場はありません。';//ここを変更
-}
+// echo '<h3>渋谷・恵比寿・代官山</h3>';
+// $venues = get_venues_with_area_small_03();//ここを変更
+// if ($venues) {
+//   echo '<ul>';
+//   foreach ($venues as $venue_id => $venue_name) {
+//     echo '<li><a href="' . get_permalink($venue_id) . '">' . $venue_name . '</a></li>';
+//   }
+//   echo '</ul>';
+// } else {
+//   echo '渋谷・恵比寿・代官山エリアに該当する会場はありません。';//ここを変更
+// }
 
 // 04 : 新宿・代々木・大久保
-echo '<h3>新宿・代々木・大久保</h3>';
-$venues = get_venues_with_area_small_04();//ここを変更
-if ($venues) {
-  echo '<ul>';
-  foreach ($venues as $venue_id => $venue_name) {
-    echo '<li><a href="' . get_permalink($venue_id) . '">' . $venue_name . '</a></li>';
-  }
-  echo '</ul>';
-} else {
-  echo '新宿・代々木・大久保エリアに該当する会場はありません。';//ここを変更
-}
+// echo '<h3>新宿・代々木・大久保</h3>';
+// $venues = get_venues_with_area_small_04();//ここを変更
+// if ($venues) {
+//   echo '<ul>';
+//   foreach ($venues as $venue_id => $venue_name) {
+//     echo '<li><a href="' . get_permalink($venue_id) . '">' . $venue_name . '</a></li>';
+//   }
+//   echo '</ul>';
+// } else {
+//   echo '新宿・代々木・大久保エリアに該当する会場はありません。';//ここを変更
+// }
 
 // 05 : 池袋～高田馬場・早稲田
-echo '<h3>池袋～高田馬場・早稲田</h3>';
-$venues = get_venues_with_area_small_05();//ここを変更
-if ($venues) {
-  echo '<ul>';
-  foreach ($venues as $venue_id => $venue_name) {
-    echo '<li><a href="' . get_permalink($venue_id) . '">' . $venue_name . '</a></li>';
-  }
-  echo '</ul>';
-} else {
-  echo '池袋～高田馬場・早稲田エリアに該当する会場はありません。';//ここを変更
-}
+// echo '<h3>池袋～高田馬場・早稲田</h3>';
+// $venues = get_venues_with_area_small_05();//ここを変更
+// if ($venues) {
+//   echo '<ul>';
+//   foreach ($venues as $venue_id => $venue_name) {
+//     echo '<li><a href="' . get_permalink($venue_id) . '">' . $venue_name . '</a></li>';
+//   }
+//   echo '</ul>';
+// } else {
+//   echo '池袋～高田馬場・早稲田エリアに該当する会場はありません。';//ここを変更
+// }
 
 // 06 : 原宿・表参道・青山
-echo '<h3>原宿・表参道・青山</h3>';
-$venues = get_venues_with_area_small_06();//ここを変更
-if ($venues) {
-  echo '<ul>';
-  foreach ($venues as $venue_id => $venue_name) {
-    echo '<li><a href="' . get_permalink($venue_id) . '">' . $venue_name . '</a></li>';
-  }
-  echo '</ul>';
-} else {
-  echo '原宿・表参道・青山エリアに該当する会場はありません。';//ここを変更
-}
+// echo '<h3>原宿・表参道・青山</h3>';
+// $venues = get_venues_with_area_small_06();//ここを変更
+// if ($venues) {
+//   echo '<ul>';
+//   foreach ($venues as $venue_id => $venue_name) {
+//     echo '<li><a href="' . get_permalink($venue_id) . '">' . $venue_name . '</a></li>';
+//   }
+//   echo '</ul>';
+// } else {
+//   echo '原宿・表参道・青山エリアに該当する会場はありません。';//ここを変更
+// }
 
 // 07:六本木・麻布・広尾
-echo '<h3>六本木・麻布・広尾</h3>';
-$venues = get_venues_with_area_small_07();
-if ($venues) {
-  echo '<ul>';
-  foreach ($venues as $venue_id => $venue_name) {
-    echo '<li><a href="' . get_permalink($venue_id) . '">' . $venue_name . '</a></li>';
-  }
-  echo '</ul>';
-} else {
-  echo '六本木・麻布・広尾エリアに該当する会場はありません。';//ここを変更
-}
-
-
-// 07:テスト
-
-echo '<h3>テスト</h3>';
-$area_small_01_venues = get_venues_by_area_small('01');
-$venues = $area_small_01_venues;
-if ($venues) {
-  echo '<ul>';
-  foreach ($venues as $venue_id => $venue_name) {
-    echo '<li><a href="' . get_permalink($venue_id) . '">' . $venue_name . '</a></li>';
-  }
-  echo '</ul>';
-} else {
-  echo 'テストエリアに該当する会場はありません。';
-}
-
-
-// テスト2
-echo '<h3>テスト2</h3>';
-
-$number_of_choices = 31; // 選択肢の総数を設定
-
-for ($i = 1; $i <= $number_of_choices; $i++) {
-    $area_value = str_pad($i, 2, '0', STR_PAD_LEFT); // 選択肢を2桁の値にフォーマット
-    $venues = get_venues_by_area_small($area_value);
-
-    if ($venues) {
-        echo '<h4>エリア-' . $area_value . '</h4>';
-        echo '<ul>';
-        foreach ($venues as $venue_id => $venue_name) {
-            echo '<li><a href="' . get_permalink($venue_id) . '">' . $venue_name . '</a></li>';
-        }
-        echo '</ul>';
-    } else {
-        echo '<p>エリア-' . $area_value . 'に該当する会場はありません。</p>';
-    }
-}
+// echo '<h3>六本木・麻布・広尾</h3>';
+// $venues = get_venues_with_area_small_07();
+// if ($venues) {
+//   echo '<ul>';
+//   foreach ($venues as $venue_id => $venue_name) {
+//     echo '<li><a href="' . get_permalink($venue_id) . '">' . $venue_name . '</a></li>';
+//   }
+//   echo '</ul>';
+// } else {
+//   echo '六本木・麻布・広尾エリアに該当する会場はありません。';//ここを変更
+// }
 
 // テスト3
 echo '<h3>テスト3</h3>';
@@ -391,7 +353,7 @@ foreach ($choices as $area_value => $area_name) {
 //   ),
 // );
 
-// $events = 
+// $events =
 // // get_posts($args);
 // tribe_get_events($args);
 
@@ -401,7 +363,7 @@ foreach ($choices as $area_value => $area_name) {
 //   // イベントの情報を出力する
 //   $title = $event->post_title;
 
-  
+
 //   echo $title;
 // }
 
@@ -432,7 +394,7 @@ foreach ($choices as $area_value => $area_name) {
 //   $event_date = tribe_get_start_date( $event_id, true, 'Y/m/d' );
 //   $event_image = get_the_post_thumbnail_url( $event_id, 'medium' );
 
-  
+
 //   // 出力するHTMLを作成
 //   $output = '<div>';
 //   $output .= '<a href="' . esc_url( $event_link ) . '">';
@@ -441,7 +403,7 @@ foreach ($choices as $area_value => $area_name) {
 //   $output .= '<p>' . esc_html( $event_date ) . '</p>';
 //   $output .= '</a>';
 //   $output .= '</div>';
-  
+
 //   echo $output;
 // }
 
@@ -807,7 +769,7 @@ Template Name: Kanto Events
 
 
 
-// $events = 
+// $events =
 
 // tribe_get_events(
 //   array(
@@ -823,15 +785,15 @@ Template Name: Kanto Events
 //   ));
 
 
-// tribe_get_events( [ 
+// tribe_get_events( [
 //   'posts_per_page' => 5,
-//   'tag'            => 'beg', // or whatever the tag name is 
+//   'tag'            => 'beg', // or whatever the tag name is
 //   'tribe_events_cat'       => 'salsa-on2',
 
 // ] );
 
 // v($events);
- 
+
 // tribe_get_events(array(
 //   'start_date' => 'now',
 //   'posts_per_page' => 6,
@@ -879,7 +841,7 @@ Template Name: Kanto Events
 
 
   ?>
-  
+
 
 
 
