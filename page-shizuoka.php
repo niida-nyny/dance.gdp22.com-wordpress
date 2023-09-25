@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: 静岡エリアあああああ
+ * Template Name: 静岡エリア
  */
 
 get_header();
@@ -13,7 +13,8 @@ get_header();
 
 // 静岡エリアを全出力するロジック
 echo '<h3 style="margin-bottom:20px">静岡エリア</h3>';
-$venues = get_venues_by_area('area_small_04_01');//ここを変更
+$area_key = 'area_small_04_01'; //ここを変更
+
 
 
 
@@ -31,7 +32,7 @@ $choices = array(
 
 
 foreach ($choices as $area_value => $area_name) {
-    $venues = get_venues_by_area_small_kanagawa($area_value);
+    $venues = get_venues_by_area($area_key, $area_value);
 
     if ($venues) {
         echo '<h3>' . $area_name . '</h3>';
@@ -46,7 +47,7 @@ foreach ($choices as $area_value => $area_name) {
 }
 
 
-  ?>
+?>
 
 
 

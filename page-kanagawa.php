@@ -155,7 +155,7 @@ get_header();
 
 // 神奈川エリアを全出力するロジック
 echo '<h3 style="margin-bottom:20px">神奈川エリア</h3>';
-$venues = get_venues_by_area('area_small_03_01');//ここを変更
+$area_key = 'area_small_03_02'; // 神奈川エリアのエリアコードを指定
 
 
 
@@ -175,7 +175,7 @@ $choices = array(
 
 
 foreach ($choices as $area_value => $area_name) {
-    $venues = get_venues_by_area_small_kanagawa($area_value);
+    $venues = get_venues_by_area($area_key, $area_value);
 
     if ($venues) {
         echo '<h3>' . $area_name . '</h3>';

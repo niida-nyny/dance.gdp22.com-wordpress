@@ -155,8 +155,12 @@ get_header();
 
 // 東京エリアを全出力するロジック
 echo '<h3 style="margin-bottom:20px">東京エリア</h3>';
-// $area_small_key =  'area_small_03_01';//東京
-$venues = get_venues_by_area('area_small_03_01');//ここを変更
+// $area_key = 'area_small_03_01'; // 東京エリアのエリアコードを指定
+$area_key = 'area_small_03_01'; // 東京エリアのエリアコードを指定
+// $area_value = '01'; // 上記エリアの選択肢を指定
+
+// $venues2 = get_venues_by_area($area_key); // 2つの引数を指定
+
 
 
 // 選択肢の連想配列を定義
@@ -197,7 +201,8 @@ $choices = array(
 );
 
 foreach ($choices as $area_value => $area_name) {
-    $venues = get_venues_by_area_small_tokyo($area_value);
+    // $venues = get_venues_by_area($area_key, $area_value);
+    $venues = get_venues_by_area($area_key, $area_value);
 
     if ($venues) {
         echo '<h3>' . $area_name . '</h3>';
@@ -210,6 +215,30 @@ foreach ($choices as $area_value => $area_name) {
         // echo '<p>' . $area_name . 'に該当する会場はありません。</p>';
     }
 }
+
+
+// ひなん
+// foreach ($choices as $area_value => $area_name) {
+//     // $venues = get_venues_by_area($area_key);
+
+//     // if ($venues) {
+//     //     echo '<h3>' . $area_name . '</h3>';
+//     //     echo '<ul style="margin-bottom:20px">';
+//     //     foreach ($venues as $venue_id => $venue_name) {
+//     //         echo '<li><a href="' . get_permalink($venue_id) . '">' . $venue_name . '</a></li>';
+//     //     }
+//     //     echo '</ul>';
+//     if ($venues && isset($venues[$area_value])) {
+//         echo '<h3>' . $area_name . '</h3>';
+//         echo '<ul style="margin-bottom:20px">';
+//         foreach ($venues[$area_value] as $venue_id => $venue_name) {
+//             echo '<li><a href="' . get_permalink($venue_id) . '">' . $venue_name . '</a></li>';
+//         }
+//         echo '</ul>';
+//     } else {
+//         // echo '<p>' . $area_name . 'に該当する会場はありません。</p>';
+//     }
+// }
 
 
 // 04-中部エリア

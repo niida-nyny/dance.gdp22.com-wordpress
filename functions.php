@@ -1023,76 +1023,77 @@ function get_venues_with_area_middle_tokyo() {
 // 使用例 page-tokyo.phpなどで以下を記述
 // $area_small_01_venues = get_venues_by_area_small('01');
 
-function get_venues_by_area_small_tokyo($area_small_value) {
-  $args = array(
-    'post_type'      => 'tribe_venue',
-    'posts_per_page' => -1,
-    'meta_query'     => array(
-      array(
-        'key'      => 'area_small_03_01',//ここを変更 カスタムフィールドのフィールド名
-        'value'    => $area_small_value,
-        'compare'  => '='
-      )
-    )
-  );
+// function get_venues_by_area_small_tokyo($area_small_value) {
+//   $args = array(
+//     'post_type'      => 'tribe_venue',
+//     'posts_per_page' => -1,
+//     'meta_query'     => array(
+//       array(
+//         'key'      => 'area_small_03_01',//ここを変更 カスタムフィールドのフィールド名
+//         'value'    => $area_small_value,
+//         'compare'  => '='
+//       )
+//     )
+//   );
 
-  $query = new WP_Query($args);
-  $venues = array();
+//   $query = new WP_Query($args);
+//   $venues = array();
 
-  if ($query->have_posts()) {
-    while ($query->have_posts()) {
-      $query->the_post();
-      $venue_id = get_the_ID();
-      $venue_name = get_the_title();
-      $venues[$venue_id] = $venue_name;
-    }
-  }
-  wp_reset_postdata();
+//   if ($query->have_posts()) {
+//     while ($query->have_posts()) {
+//       $query->the_post();
+//       $venue_id = get_the_ID();
+//       $venue_name = get_the_title();
+//       $venues[$venue_id] = $venue_name;
+//     }
+//   }
+//   wp_reset_postdata();
 
-  return $venues;
-}
+//   return $venues;
+// }
 
 // 小エリアをまとめて出力 東京
 // 使用例 page-tokyo.phpなどで以下を記述
 // $area_small_01_venues = get_venues_by_area_small('01');
 
-function get_venues_by_area_small_kanagawa($area_small_value) {
-  $args = array(
-    'post_type'      => 'tribe_venue',
-    'posts_per_page' => -1,
-    'meta_query'     => array(
-      array(
-        'key'      => 'area_small_03_02',//ここを変更 カスタムフィールドのフィールド名
-        'value'    => $area_small_value,
-        'compare'  => '='
-      )
-    )
-  );
+// function get_venues_by_area_small_kanagawa($area_small_value) {
+//   $args = array(
+//     'post_type'      => 'tribe_venue',
+//     'posts_per_page' => -1,
+//     'meta_query'     => array(
+//       array(
+//         'key'      => 'area_small_03_02',//ここを変更 カスタムフィールドのフィールド名
+//         'value'    => $area_small_value,
+//         'compare'  => '='
+//       )
+//     )
+//   );
 
-  $query = new WP_Query($args);
-  $venues = array();
+//   $query = new WP_Query($args);
+//   $venues = array();
 
-  if ($query->have_posts()) {
-    while ($query->have_posts()) {
-      $query->the_post();
-      $venue_id = get_the_ID();
-      $venue_name = get_the_title();
-      $venues[$venue_id] = $venue_name;
-    }
-  }
-  wp_reset_postdata();
+//   if ($query->have_posts()) {
+//     while ($query->have_posts()) {
+//       $query->the_post();
+//       $venue_id = get_the_ID();
+//       $venue_name = get_the_title();
+//       $venues[$venue_id] = $venue_name;
+//     }
+//   }
+//   wp_reset_postdata();
 
-  return $venues;
-}
+//   return $venues;
+// }
 
 // 都道府県を出力関数
-function get_venues_by_area($area_key) {
+function get_venues_by_area($area_key, $area_value) {
   $args = array(
     'post_type'      => 'tribe_venue',
     'posts_per_page' => -1,
     'meta_query'     => array(
       array(
         'key'      => $area_key,
+        'value'    => $area_value, // エリアコードを指定
         'compare'  => '='
       )
     )
@@ -1125,3 +1126,47 @@ function get_venues_by_area($area_key) {
 // 他の都道府県でも使用例
 // $area_small_02_venues_example = get_venues_by_area('02', 'area_small_03_03');
 // 他の都道府県の施設取得の使用例を追加...
+
+
+// 都道府県テスト2
+// function get_venues_by_area($area_key, $area_value) {
+//   $args = array(
+//     'post_type'      => 'tribe_venue',
+//     'posts_per_page' => -1,
+//     'meta_query'     => array(
+//       array(
+//         'key'      => $area_key,
+//         // 'value'    => $area_value,
+//         'compare'  => '='
+//       )
+//     )
+//   );
+
+//   $query = new WP_Query($args);
+//   $venues = array();
+
+//   if ($query->have_posts()) {
+//     while ($query->have_posts()) {
+//       $query->the_post();
+//       $venue_id = get_the_ID();
+//       $venue_name = get_the_title();
+//       $venues[$venue_id] = $venue_name;
+//     }
+//   }
+//   wp_reset_postdata();
+
+//   return $venues;
+// }
+
+// 使用例
+// 東京の施設を取得
+// $area_small_01_venues_tokyo = get_venues_by_area('01', 'area_small_03_01');
+
+// 使用例
+// 神奈川の施設を取得
+// $area_small_01_venues_kanagawa = get_venues_by_area('01', 'area_small_03_02');
+
+// 他の都道府県でも使用例
+// $area_small_02_venues_example = get_venues_by_area('02', 'area_small_03_03');
+// 他の都道府県の施設取得の使用例を追加...
+
