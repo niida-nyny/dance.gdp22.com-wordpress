@@ -155,7 +155,7 @@ get_header();
 
 // 神奈川エリアを全出力するロジック
 echo '<h3 style="margin-bottom:20px">神奈川エリア</h3>';
-$area_small_key =  'area_small_03_02';//神奈川
+$venues = get_venues_by_area('area_small_03_01');//ここを変更
 
 
 
@@ -170,7 +170,7 @@ $choices = array(
     '06' => '海老名・厚木周辺',
     '07' => '小田原周辺',
     '08' => '箱根・湯河原',
-    '09' => '非表示'
+    // '09' => '非表示'
 );
 
 

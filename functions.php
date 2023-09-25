@@ -66,8 +66,8 @@ function v($val)
 // },999);
 
 function custom_excerpt_length( $length ) {
-  return 100;	
-}	
+  return 100;
+}
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 /**
@@ -205,9 +205,9 @@ add_filter('get_the_archive_title', function ($title) {
 add_filter('wp_title','search_form_title');
 
 function search_form_title($title){
-  
+
   global $searchandfilter;
-  
+
   if ( $searchandfilter->active_sfid() == 384 || $searchandfilter->active_sfid() == 385 || $searchandfilter->active_sfid() == 386 || $searchandfilter->active_sfid() == 387)
   {
   return '検索結果';
@@ -216,7 +216,7 @@ function search_form_title($title){
   {
   return $title;
   }
- 
+
 }
 
 /*********************************
@@ -460,7 +460,7 @@ function add_archive_custom_query( $query ) {
     $get_bar = get_query_var('bar');
     $get_buz = get_query_var('buz');
     $get_qux = get_query_var('qux');
-    
+
 
     // 全文検索
     if(!empty($get_foo)) {
@@ -531,20 +531,20 @@ add_action( 'tribe_events_bar_after_template', function() {
   $terms = get_terms( [
     'taxonomy' => Tribe__Events__Main::TAXONOMY
   ] );
- 
+
   if ( empty( $terms ) || is_wp_error( $terms ) ) {
     return;
   }
- 
+
   echo '<div class="the-events-calendar-category-list"><ol>';
- 
+
   foreach ( $terms as $single_term ) {
     $url = esc_url( get_term_link( $single_term ) );
     $name = esc_html( get_term_field( 'name', $single_term ) );
- 
+
     echo "<li><a href='$url'>$name</a> </li>";
   }
- 
+
   echo '</ol></div>';
 } );
 
@@ -557,9 +557,9 @@ add_action( 'tribe_events_bar_after_template', function() {
 function wpufe_dashboard_change_head( $args ) {
   printf( "<th>%s</th>", __( "Sub Title", "wpuf" ) );
   }
-  
+
   add_action( "wpuf_dashboard_head_col", "wpufe_dashboard_change_head", 10, 2 );
-  
+
   /**
   * Add a new table cell to the dashboard table rows.
   * It adds a form for changing the post status of each posts via ajax call.
@@ -581,8 +581,8 @@ function wpufe_dashboard_change_head( $args ) {
   </td>
   <?php
   }
-  
-  add_action( "wpuf_dashboard_row_col", "wpufe_dashboard_row_col", 10, 2 );  
+
+  add_action( "wpuf_dashboard_row_col", "wpufe_dashboard_row_col", 10, 2 );
 
 
 
@@ -987,7 +987,7 @@ function get_venues_with_area_large_okinawa() {
 
 
 
-// ★★★★★★★ 中エリア 小エリア★★★★★★★ 
+// ★★★★★★★ 中エリア 小エリア★★★★★★★
 
 // ACFの中エリア-03-東京エリアを表示
 function get_venues_with_area_middle_tokyo() {
@@ -1084,3 +1084,44 @@ function get_venues_by_area_small_kanagawa($area_small_value) {
 
   return $venues;
 }
+
+// 都道府県を出力関数
+function get_venues_by_area($area_key) {
+  $args = array(
+    'post_type'      => 'tribe_venue',
+    'posts_per_page' => -1,
+    'meta_query'     => array(
+      array(
+        'key'      => $area_key,
+        'compare'  => '='
+      )
+    )
+  );
+
+  $query = new WP_Query($args);
+  $venues = array();
+
+  if ($query->have_posts()) {
+    while ($query->have_posts()) {
+      $query->the_post();
+      $venue_id = get_the_ID();
+      $venue_name = get_the_title();
+      $venues[$venue_id] = $venue_name;
+    }
+  }
+  wp_reset_postdata();
+
+  return $venues;
+}
+
+// 使用例
+// 東京の施設を取得
+// $area_small_01_venues_tokyo = get_venues_by_area('area_small_03_01');
+
+// 使用例
+// 神奈川の施設を取得
+// $area_small_01_venues_kanagawa = get_venues_by_area('01', 'area_small_03_02');
+
+// 他の都道府県でも使用例
+// $area_small_02_venues_example = get_venues_by_area('02', 'area_small_03_03');
+// 他の都道府県の施設取得の使用例を追加...

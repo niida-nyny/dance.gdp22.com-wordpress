@@ -155,7 +155,9 @@ get_header();
 
 // 東京エリアを全出力するロジック
 echo '<h3 style="margin-bottom:20px">東京エリア</h3>';
-$area_small_key =  'area_small_03_01';//東京
+// $area_small_key =  'area_small_03_01';//東京
+$venues = get_venues_by_area('area_small_03_01');//ここを変更
+
 
 // 選択肢の連想配列を定義
 // 最後の非表示はコメントアウト
