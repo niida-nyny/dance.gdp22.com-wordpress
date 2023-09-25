@@ -1,7 +1,7 @@
 <?php
 
 /**
- * 固定ページ
+ * Template Name: 東京エリア
  */
 
 get_header();
@@ -155,6 +155,7 @@ get_header();
 
 // 東京エリアを全出力するロジック
 echo '<h3 style="margin-bottom:20px">東京エリア</h3>';
+$area_small_key =  'area_small_03_01';//東京
 
 // 選択肢の連想配列を定義
 // 最後の非表示はコメントアウト
@@ -194,8 +195,7 @@ $choices = array(
 );
 
 foreach ($choices as $area_value => $area_name) {
-  // $area_small_01_venues = get_venues_by_area_small('02');
-    $venues = get_venues_by_area_small_kanagawa($area_value);
+    $venues = get_venues_by_area_small_tokyo($area_value);
 
     if ($venues) {
         echo '<h3>' . $area_name . '</h3>';
