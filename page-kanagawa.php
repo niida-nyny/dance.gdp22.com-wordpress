@@ -7,7 +7,7 @@
 get_header();
 ?>
 
-<main class="Main -single">
+<main class="Main -single Single__body">
 
 <?php
 
@@ -154,8 +154,8 @@ get_header();
 // }
 
 // 神奈川エリアを全出力するロジック
-echo '<h3 style="margin-bottom:20px">神奈川エリア</h3>';
-$area_key = 'area_small_03_02'; // 神奈川エリアのエリアコードを指定
+echo '<h2 style="margin-bottom:20px">神奈川エリア</h2>';
+$area_key = 'area_small_03_02'; //ここを変更
 
 
 

@@ -7,7 +7,7 @@
 get_header();
 ?>
 
-<main class="Main -single">
+<main class="Main -single Single__body">
 
 <?php
 
@@ -154,7 +154,7 @@ get_header();
 // }
 
 // 東京エリアを全出力するロジック
-echo '<h3 style="margin-bottom:20px">東京エリア</h3>';
+echo '<h2 style="margin-bottom:20px">東京エリア</h2>';
 // $area_key = 'area_small_03_01'; // 東京エリアのエリアコードを指定
 $area_key = 'area_small_03_01'; // 東京エリアのエリアコードを指定
 // $area_value = '01'; // 上記エリアの選択肢を指定
