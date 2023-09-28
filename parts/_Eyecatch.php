@@ -12,18 +12,6 @@
 1. 「_Eyecatch.php」でスライダー変更
 2. 「_Eyecatch.php」でサムネイル変更
 3. 「　_ArchiveList__item_good_point.php」にスマホ用サムネイルあり
-*/ ?>  
-      
-      <?php /*
-      */ ?>
-
-    <div class="Eyecatch__item">
-    <a class="Eyecatch__link ArchiveList__link" href="<?php echo esc_url('https://www.youtube.com/@dancingpono8376/streams'); ?>">
-    <img class="Eyecatch__img img-fluid" src="<?php echo esc_url(get_theme_file_uri('/img/eyecatch07.jpg')); ?>">
-    </a>
-    </div>
-
-    
 
 <div class="Eyecatch__item">
   <a class="Eyecatch__link ArchiveList__link" href="<?php echo esc_url('https://dance.gdp22.com/events/category/season/beach-event'); ?>">
@@ -31,6 +19,19 @@
   </a>
 </div>
 
+
+*/ ?>  
+      
+      <?php /*
+      */ ?>
+
+    <div class="Eyecatch__item">
+    <a class="Eyecatch__link ArchiveList__link" href="<?php echo esc_url('https://www.youtube.com/channel/UCZf7JETjfNyMnm5fyeyQhTQ'); ?>">
+    <img class="Eyecatch__img img-fluid" src="<?php echo esc_url(get_theme_file_uri('/img/eyecatch07.jpg')); ?>">
+    </a>
+    </div>
+
+    
     <div class="Eyecatch__item">
       <a class="Eyecatch__link ArchiveList__link" href="<?php echo esc_url(home_url('/philosophy')); ?>">
         <img class="Eyecatch__img img-fluid" src="<?php echo esc_url(get_theme_file_uri('/img/eyecatch01.jpg')); ?>">
@@ -72,11 +73,11 @@
   <div id="js-slick-thumbnail" class="Eyecatch__list-thumbnail pc">
     <?php /* 
     <img class="Eyecatch__img" src="<?php echo esc_url(get_theme_file_uri('/img/eyecatch00-1.jpg')); ?>">
+    <img class="Eyecatch__img" src="<?php echo esc_url(get_theme_file_uri('/img/eyecatch00.jpg')); ?>">
     
     
     */ ?>
     <img class="Eyecatch__img" src="<?php echo esc_url(get_theme_file_uri('/img/eyecatch07.jpg')); ?>">
-    <img class="Eyecatch__img" src="<?php echo esc_url(get_theme_file_uri('/img/eyecatch00.jpg')); ?>">
     <img class="Eyecatch__img" src="<?php echo esc_url(get_theme_file_uri('/img/eyecatch01.jpg')); ?>">
     <img class="Eyecatch__img" src="<?php echo esc_url(get_theme_file_uri('/img/eyecatch02.jpg')); ?>">
     <img class="Eyecatch__img" src="<?php echo esc_url(get_theme_file_uri('/img/eyecatch05.jpg')); ?>">

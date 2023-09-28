@@ -1,7 +1,6 @@
 <?php
-
 /**
- * Template Name: 大阪エリア
+ * Template Name: 宮城エリア
  */
 
 get_header();
@@ -13,22 +12,20 @@ get_header();
 // 共通の文章
 get_template_part('parts/_VenueText');
 
-// 大阪エリアを全出力するロジック
-echo '<h2 style="margin-bottom:20px">大阪エリア</h2>';
-$area_key = 'area_small_05_01'; //ここを変更
-
-
-
+// 宮城エリアを全出力するロジック
+echo '<h2 style="margin-bottom:20px">宮城エリア</h2>';
+$area_key = 'area_small_02_03'; //ここを変更
 
 // 選択肢の連想配列を定義
 // 最後の非表示はコメントアウト
 $choices = array(
-    '01' => '大阪市',
-    '02' => '堺・泉南',
-    '03' => '豊中・池田・高槻',
-    '04' => '北河内・東大阪',
-    '05' => '南河内',
-    // '06' => '非表示'
+    '01' => '水戸・笠間',
+    '02' => 'つくば・土浦・石岡',
+    '03' => '守谷・取手・牛久・稲敷',
+    '04' => '鹿島・水郷周辺',
+    '05' => '北茨城・奥久慈周辺',
+    '06' => '常総・古河'
+    // '07' => '非表示'
 );
 
 foreach ($choices as $area_value => $area_name) {
@@ -48,5 +45,5 @@ foreach ($choices as $area_value => $area_name) {
 </main>
 
 <?php
-get_footer(); 
+get_footer();
 ?>

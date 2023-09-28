@@ -10,6 +10,8 @@ get_header();
 <main class="Main -single Single__body">
 
 <?php
+// 共通の文章
+get_template_part('parts/_VenueText');
 
 
 // 01-北海道エリア
@@ -175,18 +177,15 @@ $choices = array(
 
 
 foreach ($choices as $area_value => $area_name) {
-    $venues = get_venues_by_area($area_key, $area_value);
+    // $area_key、$area_value、$area_name をここで設定
+    $args = array(
+        'area_key' => $area_key,
+        'area_value' => $area_value,
+        'area_name' => $area_name,
+    );
 
-    if ($venues) {
-        echo '<h3>' . $area_name . '</h3>';
-        echo '<ul style="margin-bottom:20px">';
-        foreach ($venues as $venue_id => $venue_name) {
-            echo '<li><a href="' . get_permalink($venue_id) . '">' . $venue_name . '</a></li>';
-        }
-        echo '</ul>';
-    } else {
-        // echo '<p>' . $area_name . 'に該当する会場はありません。</p>';
-    }
+    set_query_var('args', $args); // 変数をテンプレートに渡す
+    get_template_part('parts/_Venue');
 }
 
 

@@ -580,6 +580,7 @@ ul li:hover ul{
 .HeaderPC__logo {
   width: 20%;
   padding: 20px 0;
+  margin:0 auto;
 }
 .HeaderPC__nav {
   width: 50%;
@@ -2293,11 +2294,14 @@ body ul.wpuf-form li .wpuf-fields ul.wpuf-category-checklist {
       .sp-header .logo-box {
         width: 50vw;
         max-height: 60px;
+        margin: 0 auto;
       }
 
       .logo-box img {
         max-height: 40px;
         width: auto;
+        margin: 0 auto;
+        display: block;
       }
 
       .Nav__list li {
@@ -2374,14 +2378,14 @@ body ul.wpuf-form li .wpuf-fields ul.wpuf-category-checklist {
         list-style-type: none;
         padding: 0 2vw;
       }
-
+      
       .sp-header .nav-content a {
         display: block;
         background-color: rgba(255, 255, 255, 0.8);
         border: solid 3px #fff;
         border-radius: 30px;
         color: #000;
-        font-size: 4vw;
+        font-size: 2vw;
         padding: 2vw 4vw;
         margin: 2vw 0;
       }
@@ -2398,11 +2402,12 @@ body ul.wpuf-form li .wpuf-fields ul.wpuf-category-checklist {
     }
 
       .menu-item-560 {
-        height: 170px;
+        height: 130px;
       }
 
       .menu-item-560 .sub-menu {
         margin-left: 50px;
+        display: flex;
       }
 
       .menu-item-560 .sub-menu li {
