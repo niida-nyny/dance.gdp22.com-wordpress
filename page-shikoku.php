@@ -1,17 +1,55 @@
 <?php
 
 /**
- * 固定ページ
+ * Template Name: 四国エリア
  */
 
-get_header();
-?>
+ get_header();
+ ?>
+ 
+ <main class="Main -single Single__body">
+ 
+ <?php
+ // 共通の文章
+ get_template_part('parts/_VenueText');
+ 
+ 
+ // 沖縄エリアを全出力するロジック
+ echo '<h2 style="margin-bottom:20px">四国エリア</h2>';
+ $area_key = 'area_middle_07_shikoku'; //ここを変更
+ 
+ 
+ // 選択肢の連想配列を定義
+ // 最後の非表示はコメントアウト
+ $choices = array(
+  '01' => '愛媛県',
+  '02' => '香川県',
+  '03' => '徳島県',
+  '04' => '高知県',
+   // '05' => '非表示'
+ );
+ 
+ foreach ($choices as $area_value => $area_name) {
+   // $area_key、$area_value、$area_name をここで設定
+   $args = array(
+       'area_key' => $area_key,
+       'area_value' => $area_value,
+       'area_name' => $area_name,
+   );
+ 
+   set_query_var('args', $args); // 変数をテンプレートに渡す
+   get_template_part('parts/_Venue');
+ }
+ 
+ ?>
+ 
+ </main>
+ 
+ <?php
+ get_footer();
+ ?>
 
-<main class="Main -single">
-
-<?php
-
-
+<?php 
 // 01-北海道エリア
 // $venues = get_venues_with_area_large_hokkaido();
 // if ($venues) {
@@ -89,16 +127,16 @@ get_header();
 
 
 // 07-四国エリア
-$venues = get_venues_with_area_large_shikoku();
-if ($venues) {
-  echo '<ul>';
-  foreach ($venues as $venue_id => $venue_name) {
-    echo '<li><a href="' . get_permalink($venue_id) . '">' . $venue_name . '</a></li>';
-  }
-  echo '</ul>';
-} else {
-  echo '四国エリアに該当する会場はありません。';
-}
+// $venues = get_venues_with_area_large_shikoku();
+// if ($venues) {
+//   echo '<ul>';
+//   foreach ($venues as $venue_id => $venue_name) {
+//     echo '<li><a href="' . get_permalink($venue_id) . '">' . $venue_name . '</a></li>';
+//   }
+//   echo '</ul>';
+// } else {
+//   echo '四国エリアに該当する会場はありません。';
+// }
 
 
 // 08-九州エリア
@@ -682,12 +720,12 @@ Template Name: Kanto Events
 
 
 
-  ?>
+//   ?>
   
 
 
-
-</main>
-
 <?php
-get_footer(); ?>
+// </main>
+
+// <?php
+// get_footer(); ?>

@@ -1,14 +1,13 @@
 <?php
 
 /**
- * 固定ページ
- * 
+ * Template Name: マイページ
  */
 
 get_header();
 ?>
 
-<main class="Main -single">
+<main class="Main -single Single__body">
   <?php if(!is_user_logged_in()): ?>
       <article class="Single">
         <div class="Single__inner inner">
@@ -67,7 +66,7 @@ get_header();
                   ?>                 
               </dd>
               
-            <dt>レッスン&イベント</dt>
+            <!-- <dt>レッスン&イベント</dt> -->
               <dd>
                 <?php 
                   // $filters = array(
@@ -80,14 +79,15 @@ get_header();
                   // the_user_favorites_list($user_id = null, $site_id = null, $include_links = true, $filters = $filters, $include_thumbnails = true);
                   ?>
                 <?php 
-                    $filters = array(
-                      'post_type' => array(
-                        TribeEvents::POSTTYPE
-                      ),
-                      'status' => array(
-                        'publish', 
-                        'future'
-                      ),
+                    // $filters = array(
+                    //   'post_type' => array(
+                    //     TribeEvents::POSTTYPE
+                    //   ),
+                    //   'status' => array(
+                    //     'publish', 
+                    //     'future'
+                    //   ),
+
                       // 'terms' => array(
                       //   'category' => array(
                       //     'news', 
@@ -98,21 +98,21 @@ get_header();
                       //     'dessert'
                       //   )
                       // )
-                    );
-                    the_user_favorites_list($user_id = null, $site_id = null, $include_links = true, $filters = $filters, $include_thumbnails = true, $thumbnail_size = 'thumbnail');
+                    // );
+                    // the_user_favorites_list($user_id = null, $site_id = null, $include_links = true, $filters = $filters, $include_thumbnails = true, $thumbnail_size = 'thumbnail');
                   ?> 
               </dd>
-              <dt>場所</dt>
+              <!-- <dt>場所</dt> -->
               <dd>
                 <?php 
-                $filters = array(
-                  'post_type' => array(
-                    TribeEvents::VENUE_POST_TYPE
-                  ),
-                  'status' => array(
-                    'publish', 
-                    'future'
-                  ),
+                // $filters = array(
+                //   'post_type' => array(
+                //     TribeEvents::VENUE_POST_TYPE
+                //   ),
+                //   'status' => array(
+                //     'publish', 
+                //     'future'
+                //   ),
                   // 'terms' => array(
                   //   'category' => array(
                   //     'news', 
@@ -123,33 +123,33 @@ get_header();
                   //     'dessert'
                   //   )
                   // )
-                );
-                the_user_favorites_list($user_id = null, $site_id = null, $include_links = true, $filters = $filters, $include_thumbnails = true, $thumbnail_size = 'thumbnail');
+                // );
+                // the_user_favorites_list($user_id = null, $site_id = null, $include_links = true, $filters = $filters, $include_thumbnails = true, $thumbnail_size = 'thumbnail');
                   ?> 
               </dd>
-              <dt>インストラクター・DJ・主催者など</dt>
+              <!-- <dt>インストラクター・DJ・主催者など</dt> -->
               <dd>
                 <?php 
-                $filters = array(
-                  'post_type' => array(
-                    TribeEvents::ORGANIZER_POST_TYPE
-                  ),
-                  'status' => array(
-                    'publish', 
-                    'future'
-                  ),
-                  // 'terms' => array(
-                  //   'category' => array(
-                  //     'news', 
-                  //     'updates'
-                  //   ),
-                  //   'recipe-type' => array(
-                  //     'side-item',
-                  //     'dessert'
-                  //   )
-                  // )
-                );
-                the_user_favorites_list($user_id = null, $site_id = null, $include_links = true, $filters = $filters, $include_thumbnails = true, $thumbnail_size = 'thumbnail');
+                // $filters = array(
+                //   'post_type' => array(
+                //     TribeEvents::ORGANIZER_POST_TYPE
+                //   ),
+                //   'status' => array(
+                //     'publish', 
+                //     'future'
+                //   ),
+                //   // 'terms' => array(
+                //   //   'category' => array(
+                //   //     'news', 
+                //   //     'updates'
+                //   //   ),
+                //   //   'recipe-type' => array(
+                //   //     'side-item',
+                //   //     'dessert'
+                //   //   )
+                //   // )
+                // );
+                // the_user_favorites_list($user_id = null, $site_id = null, $include_links = true, $filters = $filters, $include_thumbnails = true, $thumbnail_size = 'thumbnail');
 
       ?>
               </dd>
